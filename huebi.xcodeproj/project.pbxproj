@@ -13,6 +13,11 @@
 		05CDA6D11A192336003163A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6D01A192336003163A8 /* Images.xcassets */; };
 		05CDA6D41A192336003163A8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6D21A192336003163A8 /* LaunchScreen.xib */; };
 		05CDA6E01A192336003163A8 /* huebiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDA6DF1A192336003163A8 /* huebiTests.swift */; };
+		05CDA6F61A192838003163A8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F51A192838003163A8 /* CoreBluetooth.framework */; };
+		05CDA6F81A192841003163A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F71A192841003163A8 /* CoreLocation.framework */; };
+		05CDA6F91A192849003163A8 /* BlueCapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; };
+		05CDA6FA1A192B26003163A8 /* BlueCapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; };
+		05CDA6FB1A192B26003163A8 /* BlueCapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +28,49 @@
 			remoteGlobalIDString = 05CDA6C31A192336003163A8;
 			remoteInfo = huebi;
 		};
+		05CDA6EF1A1927FA003163A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0551208219F5506000ED3B74;
+			remoteInfo = BlueCapKit;
+		};
+		05CDA6F11A1927FA003163A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0551208D19F5506000ED3B74;
+			remoteInfo = BlueCapKitTests;
+		};
+		05CDA6F31A192824003163A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0551208119F5506000ED3B74;
+			remoteInfo = BlueCapKit;
+		};
+		05CDA6FC1A192B26003163A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0551208119F5506000ED3B74;
+			remoteInfo = BlueCapKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05CDA6FE1A192B26003163A8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				05CDA6FB1A192B26003163A8 /* BlueCapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		05CDA6C41A192336003163A8 /* huebi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = huebi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +83,9 @@
 		05CDA6D91A192336003163A8 /* huebiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = huebiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CDA6DE1A192336003163A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05CDA6DF1A192336003163A8 /* huebiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = huebiTests.swift; sourceTree = "<group>"; };
+		05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueCapKit.xcodeproj; path = External/BlueCap/BlueCapKit.xcodeproj; sourceTree = "<group>"; };
+		05CDA6F51A192838003163A8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		05CDA6F71A192841003163A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +93,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CDA6FA1A192B26003163A8 /* BlueCapKit.framework in Frameworks */,
+				05CDA6F91A192849003163A8 /* BlueCapKit.framework in Frameworks */,
+				05CDA6F81A192841003163A8 /* CoreLocation.framework in Frameworks */,
+				05CDA6F61A192838003163A8 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +113,9 @@
 		05CDA6BB1A192336003163A8 = {
 			isa = PBXGroup;
 			children = (
+				05CDA6F71A192841003163A8 /* CoreLocation.framework */,
+				05CDA6F51A192838003163A8 /* CoreBluetooth.framework */,
+				05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */,
 				05CDA6C61A192336003163A8 /* huebi */,
 				05CDA6DC1A192336003163A8 /* huebiTests */,
 				05CDA6C51A192336003163A8 /* Products */,
@@ -112,6 +169,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		05CDA6EB1A1927FA003163A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */,
+				05CDA6F21A1927FA003163A8 /* BlueCapKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +188,13 @@
 				05CDA6C01A192336003163A8 /* Sources */,
 				05CDA6C11A192336003163A8 /* Frameworks */,
 				05CDA6C21A192336003163A8 /* Resources */,
+				05CDA6FE1A192B26003163A8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				05CDA6F41A192824003163A8 /* PBXTargetDependency */,
+				05CDA6FD1A192B26003163A8 /* PBXTargetDependency */,
 			);
 			name = huebi;
 			productName = huebi;
@@ -179,6 +248,12 @@
 			mainGroup = 05CDA6BB1A192336003163A8;
 			productRefGroup = 05CDA6C51A192336003163A8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 05CDA6EB1A1927FA003163A8 /* Products */;
+					ProjectRef = 05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				05CDA6C31A192336003163A8 /* huebi */,
@@ -186,6 +261,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BlueCapKit.framework;
+			remoteRef = 05CDA6EF1A1927FA003163A8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		05CDA6F21A1927FA003163A8 /* BlueCapKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = BlueCapKitTests.xctest;
+			remoteRef = 05CDA6F11A1927FA003163A8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		05CDA6C21A192336003163A8 /* Resources */ = {
@@ -232,6 +324,16 @@
 			isa = PBXTargetDependency;
 			target = 05CDA6C31A192336003163A8 /* huebi */;
 			targetProxy = 05CDA6DA1A192336003163A8 /* PBXContainerItemProxy */;
+		};
+		05CDA6F41A192824003163A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlueCapKit;
+			targetProxy = 05CDA6F31A192824003163A8 /* PBXContainerItemProxy */;
+		};
+		05CDA6FD1A192B26003163A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlueCapKit;
+			targetProxy = 05CDA6FC1A192B26003163A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -336,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = huebi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = huebi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
