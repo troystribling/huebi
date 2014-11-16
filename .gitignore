@@ -1,0 +1,6 @@
+*.xcuserstate
+*.xcscheme
+*.xcbkptlist
+huebi.xcodeproj/xcuserdata/*
+huebi.xcodeproj/project.xcworkspace/xcuserdata/*
+.DS_Store
