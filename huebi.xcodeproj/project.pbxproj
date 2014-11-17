@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055F90451A1A5B1E00A2D808 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055F90401A1A5AF800A2D808 /* Alamofire.framework */; };
+		055F90461A1A5BA200A2D808 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055F90401A1A5AF800A2D808 /* Alamofire.framework */; };
+		055F90471A1A5BA200A2D808 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 055F90401A1A5AF800A2D808 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05CDA6CA1A192336003163A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDA6C91A192336003163A8 /* AppDelegate.swift */; };
 		05CDA6CC1A192336003163A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDA6CB1A192336003163A8 /* ViewController.swift */; };
 		05CDA6CF1A192336003163A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6CD1A192336003163A8 /* Main.storyboard */; };
@@ -21,6 +24,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		055F903F1A1A5AF800A2D808 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 055F903A1A1A5AF800A2D808 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		055F90411A1A5AF800A2D808 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 055F903A1A1A5AF800A2D808 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		055F90431A1A5B1400A2D808 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 055F903A1A1A5AF800A2D808 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		055F90481A1A5BA200A2D808 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 055F903A1A1A5AF800A2D808 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 		05CDA6DA1A192336003163A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 05CDA6BC1A192336003163A8 /* Project object */;
@@ -66,6 +97,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				05CDA6FB1A192B26003163A8 /* BlueCapKit.framework in Embed Frameworks */,
+				055F90471A1A5BA200A2D808 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +105,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		055F903A1A1A5AF800A2D808 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = External/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		05CDA6C41A192336003163A8 /* huebi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = huebi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CDA6C81A192336003163A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05CDA6C91A192336003163A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055F90451A1A5B1E00A2D808 /* Alamofire.framework in Frameworks */,
+				055F90461A1A5BA200A2D808 /* Alamofire.framework in Frameworks */,
 				05CDA6FA1A192B26003163A8 /* BlueCapKit.framework in Frameworks */,
 				05CDA6F91A192849003163A8 /* BlueCapKit.framework in Frameworks */,
 				05CDA6F81A192841003163A8 /* CoreLocation.framework in Frameworks */,
@@ -110,12 +145,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		055F903B1A1A5AF800A2D808 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				055F90401A1A5AF800A2D808 /* Alamofire.framework */,
+				055F90421A1A5AF800A2D808 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		05CDA6BB1A192336003163A8 = {
 			isa = PBXGroup;
 			children = (
-				05CDA6F71A192841003163A8 /* CoreLocation.framework */,
 				05CDA6F51A192838003163A8 /* CoreBluetooth.framework */,
+				05CDA6F71A192841003163A8 /* CoreLocation.framework */,
 				05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */,
+				055F903A1A1A5AF800A2D808 /* Alamofire.xcodeproj */,
 				05CDA6C61A192336003163A8 /* huebi */,
 				05CDA6DC1A192336003163A8 /* huebiTests */,
 				05CDA6C51A192336003163A8 /* Products */,
@@ -193,8 +238,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				055F90441A1A5B1400A2D808 /* PBXTargetDependency */,
 				05CDA6F41A192824003163A8 /* PBXTargetDependency */,
 				05CDA6FD1A192B26003163A8 /* PBXTargetDependency */,
+				055F90491A1A5BA200A2D808 /* PBXTargetDependency */,
 			);
 			name = huebi;
 			productName = huebi;
@@ -250,6 +297,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 055F903B1A1A5AF800A2D808 /* Products */;
+					ProjectRef = 055F903A1A1A5AF800A2D808 /* Alamofire.xcodeproj */;
+				},
+				{
 					ProductGroup = 05CDA6EB1A1927FA003163A8 /* Products */;
 					ProjectRef = 05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */;
 				},
@@ -263,6 +314,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		055F90401A1A5AF800A2D808 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 055F903F1A1A5AF800A2D808 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		055F90421A1A5AF800A2D808 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 055F90411A1A5AF800A2D808 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -320,6 +385,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		055F90441A1A5B1400A2D808 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 055F90431A1A5B1400A2D808 /* PBXContainerItemProxy */;
+		};
+		055F90491A1A5BA200A2D808 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 055F90481A1A5BA200A2D808 /* PBXContainerItemProxy */;
+		};
 		05CDA6DB1A192336003163A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 05CDA6C31A192336003163A8 /* huebi */;
@@ -438,10 +513,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External",
+				);
 				INFOPLIST_FILE = huebi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -449,10 +533,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External",
+				);
 				INFOPLIST_FILE = huebi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -509,6 +601,7 @@
 				05CDA6E51A192336003163A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05CDA6E61A192336003163A8 /* Build configuration list for PBXNativeTarget "huebiTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +610,7 @@
 				05CDA6E81A192336003163A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
