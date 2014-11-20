@@ -15,7 +15,6 @@
 		05CDA6CC1A192336003163A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDA6CB1A192336003163A8 /* ViewController.swift */; };
 		05CDA6CF1A192336003163A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6CD1A192336003163A8 /* Main.storyboard */; };
 		05CDA6D11A192336003163A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6D01A192336003163A8 /* Images.xcassets */; };
-		05CDA6D41A192336003163A8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6D21A192336003163A8 /* LaunchScreen.xib */; };
 		05CDA6E01A192336003163A8 /* huebiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDA6DF1A192336003163A8 /* huebiTests.swift */; };
 		05CDA6F61A192838003163A8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F51A192838003163A8 /* CoreBluetooth.framework */; };
 		05CDA6F81A192841003163A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F71A192841003163A8 /* CoreLocation.framework */; };
@@ -114,7 +113,6 @@
 		05CDA6CB1A192336003163A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05CDA6CE1A192336003163A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05CDA6D01A192336003163A8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		05CDA6D31A192336003163A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		05CDA6D91A192336003163A8 /* huebiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = huebiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CDA6DE1A192336003163A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05CDA6DF1A192336003163A8 /* huebiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = huebiTests.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 				055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */,
 				05CDA6CB1A192336003163A8 /* ViewController.swift */,
 				05CDA6D01A192336003163A8 /* Images.xcassets */,
-				05CDA6D21A192336003163A8 /* LaunchScreen.xib */,
 				05CDA6CD1A192336003163A8 /* Main.storyboard */,
 				05CDA6C71A192336003163A8 /* Supporting Files */,
 			);
@@ -353,7 +350,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				05CDA6CF1A192336003163A8 /* Main.storyboard in Resources */,
-				05CDA6D41A192336003163A8 /* LaunchScreen.xib in Resources */,
 				05CDA6D11A192336003163A8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,14 +419,6 @@
 				05CDA6CE1A192336003163A8 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		05CDA6D21A192336003163A8 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05CDA6D31A192336003163A8 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -532,6 +520,7 @@
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -552,6 +541,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
