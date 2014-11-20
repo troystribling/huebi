@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bridge Connect View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="huebi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="BridgeConnectViewController" customModule="huebi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,13 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WD3-Kf-bML">
-                                <rect key="frame" x="30" y="555" width="540" height="5"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WD3-Kf-bML">
+                                <rect key="frame" x="30" y="558" width="540" height="2"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="5" id="H7d-X8-hE2"/>
+                                    <constraint firstAttribute="height" constant="2" id="H7d-X8-hE2"/>
                                 </constraints>
+                                <color key="progressTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="0.85788892660000005" green="0.85788892660000005" blue="0.85788892660000005" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PressSmartbridge" translatesAutoresizingMaskIntoConstraints="NO" id="r35-Nt-Loa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PressSmartbridge" translatesAutoresizingMaskIntoConstraints="NO" id="r35-Nt-Loa">
                                 <rect key="frame" x="25" y="28" width="550" height="514"/>
                             </imageView>
                         </subviews>
@@ -38,6 +40,9 @@
                             <constraint firstItem="WD3-Kf-bML" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="14" id="lKH-Sg-KX1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bridgeConnectProgressView" destination="WD3-Kf-bML" id="h3I-WW-t6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
