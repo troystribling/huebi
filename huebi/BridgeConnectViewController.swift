@@ -11,8 +11,7 @@ import UIKit
 class BridgeConnectViewController: UIViewController {
 
     @IBOutlet var bridgeConnectProgressView : UIProgressView!
-    
-    
+
     required init(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)
     }
@@ -24,4 +23,6 @@ class BridgeConnectViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     }
 
+    func updateProgressBar() {        
+    }
 }

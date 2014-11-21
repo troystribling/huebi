@@ -12,8 +12,8 @@ import BlueCapKit
 
 class HueClient {
     
-    func discoverBridge() {
-        Alamofire.request(.GET, "www.meethue.com/api/nupnp").response{(request, response, data, error) in
+    class func discoverBridge() {
+        Alamofire.request(.GET, "https://www.meethue.com/api/nupnp").response{(request, response, data, error) in
             println(request)
             println(response)
             println(error)
