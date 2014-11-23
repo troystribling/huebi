@@ -14,7 +14,6 @@
 		055FA2AF1A1BB1BB0042D2A3 /* HueClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */; };
 		055FA2B71A1E53960042D2A3 /* BridgeConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */; };
 		05CDA6CA1A192336003163A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDA6C91A192336003163A8 /* AppDelegate.swift */; };
-		05CDA6CC1A192336003163A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDA6CB1A192336003163A8 /* ViewController.swift */; };
 		05CDA6CF1A192336003163A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6CD1A192336003163A8 /* Main.storyboard */; };
 		05CDA6D11A192336003163A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6D01A192336003163A8 /* Images.xcassets */; };
 		05CDA6E01A192336003163A8 /* huebiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDA6DF1A192336003163A8 /* huebiTests.swift */; };
@@ -23,6 +22,9 @@
 		05CDA6F91A192849003163A8 /* BlueCapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; };
 		05CDA6FA1A192B26003163A8 /* BlueCapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; };
 		05CDA6FB1A192B26003163A8 /* BlueCapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05D4F60C1A2247FC0027EA62 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60A1A2247FC0027EA62 /* Notify.swift */; };
+		05D4F60D1A2247FC0027EA62 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */; };
+		05D4F6121A22851D0027EA62 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6111A22851D0027EA62 /* StatusViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +116,6 @@
 		05CDA6C41A192336003163A8 /* huebi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = huebi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CDA6C81A192336003163A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05CDA6C91A192336003163A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		05CDA6CB1A192336003163A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05CDA6CE1A192336003163A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05CDA6D01A192336003163A8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		05CDA6D91A192336003163A8 /* huebiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = huebiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +124,9 @@
 		05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueCapKit.xcodeproj; path = External/BlueCap/BlueCapKit.xcodeproj; sourceTree = "<group>"; };
 		05CDA6F51A192838003163A8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		05CDA6F71A192841003163A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		05D4F60A1A2247FC0027EA62 /* Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
+		05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
+		05D4F6111A22851D0027EA62 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,12 +189,14 @@
 			children = (
 				05CDA6C91A192336003163A8 /* AppDelegate.swift */,
 				055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */,
+				05348D9C1A1EED1B009726B9 /* DataStore.swift */,
 				055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */,
+				05D4F60A1A2247FC0027EA62 /* Notify.swift */,
+				05D4F6111A22851D0027EA62 /* StatusViewController.swift */,
+				05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */,
 				05CDA6D01A192336003163A8 /* Images.xcassets */,
 				05CDA6CD1A192336003163A8 /* Main.storyboard */,
 				05CDA6C71A192336003163A8 /* Supporting Files */,
-				05CDA6CB1A192336003163A8 /* ViewController.swift */,
-				05348D9C1A1EED1B009726B9 /* DataStore.swift */,
 			);
 			path = huebi;
 			sourceTree = "<group>";
@@ -374,8 +380,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05CDA6CC1A192336003163A8 /* ViewController.swift in Sources */,
+				05D4F6121A22851D0027EA62 /* StatusViewController.swift in Sources */,
 				055FA2AF1A1BB1BB0042D2A3 /* HueClient.swift in Sources */,
+				05D4F60D1A2247FC0027EA62 /* UIAlertControllerExtensions.swift in Sources */,
+				05D4F60C1A2247FC0027EA62 /* Notify.swift in Sources */,
 				055FA2B71A1E53960042D2A3 /* BridgeConnectViewController.swift in Sources */,
 				05348D9D1A1EED1B009726B9 /* DataStore.swift in Sources */,
 				05CDA6CA1A192336003163A8 /* AppDelegate.swift in Sources */,

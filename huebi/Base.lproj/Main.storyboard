@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="opP-ye-BZ0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -46,9 +46,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1364" y="578"/>
+        </scene>
+        <!--Status View Controller-->
+        <scene sceneID="P3W-SB-TdE">
+            <objects>
+                <viewController id="opP-ye-BZ0" customClass="StatusViewController" customModule="huebi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rRK-Fi-Pv7"/>
+                        <viewControllerLayoutGuide type="bottom" id="fxN-oJ-c9a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hZz-Li-GkL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StatusEnabled" translatesAutoresizingMaskIntoConstraints="NO" id="gTR-Ib-0oj">
+                                <rect key="frame" x="172" y="172" width="256" height="256"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="gTR-Ib-0oj" secondAttribute="centerX" id="iZu-Hi-P8x"/>
+                            <constraint firstAttribute="centerY" secondItem="gTR-Ib-0oj" secondAttribute="centerY" id="kA7-Ew-6bq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="BridgeConnect" id="GlC-NP-Sf5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VD2-nf-4li" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581" y="578"/>
         </scene>
     </scenes>
     <resources>
         <image name="PressSmartbridge" width="516" height="475"/>
+        <image name="StatusEnabled" width="256" height="256"/>
     </resources>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BlueCapKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        HueClient.discoverBridge()
+        if DataStore.getBridgeIpAddress() == nil {
+            HueClient.discoverBridge({(data) in
+                Logger.debug("\(data)")
+            }, discoveyFailed:{(error) in
+            })
+        }
         return true
     }
 
@@ -36,4 +42,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
