@@ -17,10 +17,10 @@ class StatusViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        if DataStore.getBridgeIpAddress() == nil {
+        if DataStore.getBridge() == nil {
             HueClient.discoverBridge({(data) in
                 Logger.debug("\(data)")
-                }, discoveyFailed:{(error) in
+            }, discoveyFailed:{(error) in
             })
         }
         super.viewDidLoad()

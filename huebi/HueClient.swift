@@ -12,8 +12,8 @@ import BlueCapKit
 
 class HueClient {
     
-    class func discoverBridge(discoverySuccess:(data:AnyObject?)->(), discoveyFailed:(error:NSError)->()) {
-        Alamofire.request(.GET, "https://www.meethue.com/api/nupnp").responseJSON{(_, _, data, error) in
+    class func discoverBridge(discoverySuccess:(data:JSON)->(), discoveyFailed:(error:NSError)->()) {
+        Alamofire.request(.GET, "https://www.meethue.com/api/nupnp").responseSwiftyJSON{(_, _, data, error) in
             if let error = error {
                 discoveyFailed(error:error)
             } else {

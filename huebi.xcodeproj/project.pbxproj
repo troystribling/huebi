@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053144DE1A23C134006523BD /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053144DD1A23C134006523BD /* SwiftyJSON.swift */; };
+		053144E01A23C198006523BD /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053144DF1A23C198006523BD /* Alamofire-SwiftyJSON.swift */; };
 		05348D9D1A1EED1B009726B9 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05348D9C1A1EED1B009726B9 /* DataStore.swift */; };
-		055F90451A1A5B1E00A2D808 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055F90401A1A5AF800A2D808 /* Alamofire.framework */; };
 		055F90461A1A5BA200A2D808 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055F90401A1A5AF800A2D808 /* Alamofire.framework */; };
 		055F90471A1A5BA200A2D808 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 055F90401A1A5AF800A2D808 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		055FA2AF1A1BB1BB0042D2A3 /* HueClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */; };
@@ -18,9 +19,7 @@
 		05CDA6D11A192336003163A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6D01A192336003163A8 /* Images.xcassets */; };
 		05CDA6E01A192336003163A8 /* huebiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDA6DF1A192336003163A8 /* huebiTests.swift */; };
 		05CDA6F61A192838003163A8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F51A192838003163A8 /* CoreBluetooth.framework */; };
-		05CDA6F81A192841003163A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F71A192841003163A8 /* CoreLocation.framework */; };
 		05CDA6F91A192849003163A8 /* BlueCapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; };
-		05CDA6FA1A192B26003163A8 /* BlueCapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; };
 		05CDA6FB1A192B26003163A8 /* BlueCapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05D4F60C1A2247FC0027EA62 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60A1A2247FC0027EA62 /* Notify.swift */; };
 		05D4F60D1A2247FC0027EA62 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */; };
@@ -113,6 +112,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		053144DD1A23C134006523BD /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		053144DF1A23C198006523BD /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		05348D9C1A1EED1B009726B9 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		055F903A1A1A5AF800A2D808 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = External/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueClient.swift; sourceTree = "<group>"; };
@@ -142,11 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055F90451A1A5B1E00A2D808 /* Alamofire.framework in Frameworks */,
 				055F90461A1A5BA200A2D808 /* Alamofire.framework in Frameworks */,
-				05CDA6FA1A192B26003163A8 /* BlueCapKit.framework in Frameworks */,
 				05CDA6F91A192849003163A8 /* BlueCapKit.framework in Frameworks */,
-				05CDA6F81A192841003163A8 /* CoreLocation.framework in Frameworks */,
 				05CDA6F61A192838003163A8 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,20 +193,14 @@
 		05CDA6C61A192336003163A8 /* huebi */ = {
 			isa = PBXGroup;
 			children = (
-				05D4F6171A22C4600027EA62 /* AddBeaconViewController.swift */,
-				05D4F6151A22C2B30027EA62 /* AddBridgeViewController.swift */,
 				05CDA6C91A192336003163A8 /* AppDelegate.swift */,
-				05D4F6191A22C93E0027EA62 /* BeaconsTableViewController.swift */,
-				055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */,
-				05D4F6131A22BFCE0027EA62 /* BridgesViewController.swift */,
-				05348D9C1A1EED1B009726B9 /* DataStore.swift */,
-				055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */,
-				05CDA6D01A192336003163A8 /* Images.xcassets */,
-				05CDA6CD1A192336003163A8 /* Main.storyboard */,
-				05D4F60A1A2247FC0027EA62 /* Notify.swift */,
 				05D4F6111A22851D0027EA62 /* StatusViewController.swift */,
+				05CDA6D01A192336003163A8 /* Images.xcassets */,
+				05D4F6351A23B9F80027EA62 /* Beacons */,
+				05D4F6341A23B9E00027EA62 /* Bridge */,
+				05CDA6CD1A192336003163A8 /* Main.storyboard */,
 				05CDA6C71A192336003163A8 /* Supporting Files */,
-				05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */,
+				05D4F6361A23BA240027EA62 /* Utils */,
 			);
 			path = huebi;
 			sourceTree = "<group>";
@@ -245,6 +237,38 @@
 				05CDA6F21A1927FA003163A8 /* BlueCapKitTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		05D4F6341A23B9E00027EA62 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				05D4F6151A22C2B30027EA62 /* AddBridgeViewController.swift */,
+				055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */,
+				05D4F6131A22BFCE0027EA62 /* BridgesViewController.swift */,
+				055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */,
+			);
+			name = Bridge;
+			sourceTree = "<group>";
+		};
+		05D4F6351A23B9F80027EA62 /* Beacons */ = {
+			isa = PBXGroup;
+			children = (
+				05D4F6171A22C4600027EA62 /* AddBeaconViewController.swift */,
+				05D4F6191A22C93E0027EA62 /* BeaconsTableViewController.swift */,
+			);
+			name = Beacons;
+			sourceTree = "<group>";
+		};
+		05D4F6361A23BA240027EA62 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				053144DF1A23C198006523BD /* Alamofire-SwiftyJSON.swift */,
+				05348D9C1A1EED1B009726B9 /* DataStore.swift */,
+				05D4F60A1A2247FC0027EA62 /* Notify.swift */,
+				053144DD1A23C134006523BD /* SwiftyJSON.swift */,
+				05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +419,8 @@
 				05D4F6121A22851D0027EA62 /* StatusViewController.swift in Sources */,
 				055FA2AF1A1BB1BB0042D2A3 /* HueClient.swift in Sources */,
 				05D4F6181A22C4600027EA62 /* AddBeaconViewController.swift in Sources */,
+				053144DE1A23C134006523BD /* SwiftyJSON.swift in Sources */,
+				053144E01A23C198006523BD /* Alamofire-SwiftyJSON.swift in Sources */,
 				05D4F60D1A2247FC0027EA62 /* UIAlertControllerExtensions.swift in Sources */,
 				05D4F61A1A22C93E0027EA62 /* BeaconsTableViewController.swift in Sources */,
 				05D4F60C1A2247FC0027EA62 /* Notify.swift in Sources */,
@@ -538,6 +564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,6 +588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

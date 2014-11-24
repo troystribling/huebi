@@ -11,12 +11,24 @@ import Foundation
 class DataStore {
     
     // Bridge IP Address
-    class func getBridgeIpAddress() -> String? {
-        return NSUserDefaults.standardUserDefaults().stringForKey("bridgeIPAddress")
+    class func getBridge() -> [String:String]? {
+        if let storedBridge = NSUserDefaults.standardUserDefaults().dictionaryForKey("bridge") {
+            var bridge = [String:String]()
+            for (key, val) in storedBridge {
+                if let key = key as? String {
+                    if let val = val as? String {
+                        bridge[key] = val
+                    }
+                }
+            }
+            return bridge
+        } else {
+            return nil
+        }
     }
     
-    class func setBridgeIpAddress(ipAddress:String) {
-        NSUserDefaults.standardUserDefaults().setObject(ipAddress, forKey:"bridgeIPAddress")
+    class func setBridge(bridge:[String:String]) {
+        NSUserDefaults.standardUserDefaults().setObject(bridge, forKey:"bridge")
     }
 
 }
