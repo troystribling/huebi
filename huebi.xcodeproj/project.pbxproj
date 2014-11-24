@@ -25,6 +25,10 @@
 		05D4F60C1A2247FC0027EA62 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60A1A2247FC0027EA62 /* Notify.swift */; };
 		05D4F60D1A2247FC0027EA62 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */; };
 		05D4F6121A22851D0027EA62 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6111A22851D0027EA62 /* StatusViewController.swift */; };
+		05D4F6141A22BFCE0027EA62 /* BridgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6131A22BFCE0027EA62 /* BridgesViewController.swift */; };
+		05D4F6161A22C2B30027EA62 /* AddBridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6151A22C2B30027EA62 /* AddBridgeViewController.swift */; };
+		05D4F6181A22C4600027EA62 /* AddBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6171A22C4600027EA62 /* AddBeaconViewController.swift */; };
+		05D4F61A1A22C93E0027EA62 /* BeaconsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6191A22C93E0027EA62 /* BeaconsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +131,10 @@
 		05D4F60A1A2247FC0027EA62 /* Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
 		05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
 		05D4F6111A22851D0027EA62 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		05D4F6131A22BFCE0027EA62 /* BridgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgesViewController.swift; sourceTree = "<group>"; };
+		05D4F6151A22C2B30027EA62 /* AddBridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBridgeViewController.swift; sourceTree = "<group>"; };
+		05D4F6171A22C4600027EA62 /* AddBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBeaconViewController.swift; sourceTree = "<group>"; };
+		05D4F6191A22C93E0027EA62 /* BeaconsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,16 +195,20 @@
 		05CDA6C61A192336003163A8 /* huebi */ = {
 			isa = PBXGroup;
 			children = (
+				05D4F6171A22C4600027EA62 /* AddBeaconViewController.swift */,
+				05D4F6151A22C2B30027EA62 /* AddBridgeViewController.swift */,
 				05CDA6C91A192336003163A8 /* AppDelegate.swift */,
+				05D4F6191A22C93E0027EA62 /* BeaconsTableViewController.swift */,
 				055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */,
+				05D4F6131A22BFCE0027EA62 /* BridgesViewController.swift */,
 				05348D9C1A1EED1B009726B9 /* DataStore.swift */,
 				055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */,
-				05D4F60A1A2247FC0027EA62 /* Notify.swift */,
-				05D4F6111A22851D0027EA62 /* StatusViewController.swift */,
-				05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */,
 				05CDA6D01A192336003163A8 /* Images.xcassets */,
 				05CDA6CD1A192336003163A8 /* Main.storyboard */,
+				05D4F60A1A2247FC0027EA62 /* Notify.swift */,
+				05D4F6111A22851D0027EA62 /* StatusViewController.swift */,
 				05CDA6C71A192336003163A8 /* Supporting Files */,
+				05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */,
 			);
 			path = huebi;
 			sourceTree = "<group>";
@@ -382,10 +394,14 @@
 			files = (
 				05D4F6121A22851D0027EA62 /* StatusViewController.swift in Sources */,
 				055FA2AF1A1BB1BB0042D2A3 /* HueClient.swift in Sources */,
+				05D4F6181A22C4600027EA62 /* AddBeaconViewController.swift in Sources */,
 				05D4F60D1A2247FC0027EA62 /* UIAlertControllerExtensions.swift in Sources */,
+				05D4F61A1A22C93E0027EA62 /* BeaconsTableViewController.swift in Sources */,
 				05D4F60C1A2247FC0027EA62 /* Notify.swift in Sources */,
 				055FA2B71A1E53960042D2A3 /* BridgeConnectViewController.swift in Sources */,
+				05D4F6141A22BFCE0027EA62 /* BridgesViewController.swift in Sources */,
 				05348D9D1A1EED1B009726B9 /* DataStore.swift in Sources */,
+				05D4F6161A22C2B30027EA62 /* AddBridgeViewController.swift in Sources */,
 				05CDA6CA1A192336003163A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

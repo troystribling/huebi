@@ -1,19 +1,17 @@
 //
-//  BridgeConnectViewController.swift
+//  AddBeaconViewController.swift
 //  huebi
 //
-//  Created by Troy Stribling on 11/20/14.
+//  Created by Troy Stribling on 11/23/14.
 //  Copyright (c) 2014 gnos.us. All rights reserved.
 //
 
 import UIKit
 
-class BridgeConnectViewController: UIViewController {
-
-    @IBOutlet var bridgeConnectProgressView : UIProgressView!
+class AddBeaconViewController: UIViewController {
 
     required init(coder aDecoder:NSCoder) {
-        super.init(coder:aDecoder)
+        super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
@@ -31,6 +29,4 @@ class BridgeConnectViewController: UIViewController {
     override func prepareForSegue(segue:UIStoryboardSegue, sender:AnyObject?) {
     }
 
-    func updateProgressBar() {        
-    }
 }
