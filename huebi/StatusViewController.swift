@@ -12,6 +12,13 @@ import BlueCapKit
 
 class StatusViewController: UIViewController {
 
+    struct MainStoryboard {
+        static let BridgeConnectSegue   = "BridgeConnect"
+        static let AddBridgeSegue       = "AddBridge"
+        static let BeaconsSegue         = "Beacons"
+        static let AddBeaconSegue       = "AddBeacon"
+    }
+    
     required init(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)
     }
@@ -19,8 +26,8 @@ class StatusViewController: UIViewController {
     override func viewDidLoad() {
         if DataStore.getBridge() == nil {
             HueClient.discoverBridge({(data) in
-                Logger.debug("\(data)")
             }, discoveyFailed:{(error) in
+                self.performSegueWithIdentifier(MainStoryboard.AddBridgeSegue, sender:self)
             })
         }
         super.viewDidLoad()
@@ -34,4 +41,6 @@ class StatusViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
+    override func prepareForSegue(segue:UIStoryboardSegue, sender:AnyObject?) {
+    }
 }

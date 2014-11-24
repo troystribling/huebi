@@ -10,7 +10,7 @@ import Foundation
 
 class DataStore {
     
-    // Bridge IP Address
+    // Bridge
     class func getBridge() -> [String:String]? {
         if let storedBridge = NSUserDefaults.standardUserDefaults().dictionaryForKey("bridge") {
             var bridge = [String:String]()
@@ -30,5 +30,101 @@ class DataStore {
     class func setBridge(bridge:[String:String]) {
         NSUserDefaults.standardUserDefaults().setObject(bridge, forKey:"bridge")
     }
+
+    // Beacons
+    class func getBeacons() -> [String:NSUUID] {
+        if let storedBeacons = NSUserDefaults.standardUserDefaults().dictionaryForKey("peripheralBeacons") {
+            var beacons = [String:NSUUID]()
+            for (name, uuid) in storedBeacons {
+                if let name = name as? String {
+                    if let uuid = uuid as? String {
+                        beacons[name] = NSUUID(UUIDString:uuid)
+                    }
+                }
+            }
+            return beacons
+        } else {
+            return [:]
+        }
+    }
+    
+    class func setBeacons(beacons:[String:NSUUID]) {
+        var storedBeacons = [String:String]()
+        for (name, uuid) in beacons {
+            storedBeacons[name] = uuid.UUIDString
+        }
+        NSUserDefaults.standardUserDefaults().setObject(storedBeacons, forKey:"peripheralBeacons")
+    }
+    
+    class func getBeaconNames() -> [String] {
+        return self.getBeacons().keys.array
+    }
+    
+    class func addBeacon(name:String, uuid:NSUUID) {
+        var beacons = self.getBeacons()
+        beacons[name] = uuid
+        self.setBeacons(beacons)
+    }
+    
+    class func removeBeacon(name:String) {
+        var beacons = self.getBeacons()
+        beacons.removeValueForKey(name)
+        self.setBeacons(beacons)
+    }
+    
+    class func getBeacon(name:String) -> NSUUID? {
+        let beacons = self.getBeacons()
+        return beacons[name]
+    }
+    
+    class func getBeaconConfigs() -> [String:[UInt16]] {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if let storedConfigs = userDefaults.dictionaryForKey("peipheralBeaconConfigs") {
+            var configs = [String:[UInt16]]()
+            for (name, config) in storedConfigs {
+                if let name = name as? String {
+                    if config.count == 2 {
+                        let minor = config[0] as NSNumber
+                        let major = config[1] as NSNumber
+                        configs[name] = [minor.unsignedShortValue, major.unsignedShortValue]
+                    }
+                }
+            }
+            return configs
+        } else {
+            return [:]
+        }
+    }
+    
+    class func setBeaconConfigs(configs:[String:[UInt16]]) {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        var storeConfigs = [String:[NSNumber]]()
+        for (name, config) in configs {
+            storeConfigs[name] = [NSNumber(unsignedShort:config[0]), NSNumber(unsignedShort:config[1])]
+        }
+        userDefaults.setObject(storeConfigs, forKey:"peipheralBeaconConfigs")
+    }
+    
+    class func addBeaconConfig(name:String, config:[UInt16]) {
+        var configs = self.getBeaconConfigs()
+        configs[name] = config
+        self.setBeaconConfigs(configs)
+    }
+    
+    class func getBeaconConfig(name:String) -> [UInt16] {
+        let configs = self.getBeaconConfigs()
+        if let config = configs[name] {
+            return config
+        } else {
+            return [0,0]
+        }
+    }
+    
+    class func removeBeaconConfig(name:String) {
+        var configs = self.getBeaconConfigs()
+        configs.removeValueForKey(name)
+        self.setBeaconConfigs(configs)
+    }
+    
 
 }
