@@ -1,5 +1,5 @@
 //
-//  BeaconsTableViewController.swift
+//  BeaconsViewController.swift
 //  huebi
 //
 //  Created by Troy Stribling on 11/23/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BeaconsTableViewController: UITableViewController {
+class BeaconsViewController: UITableViewController {
 
     required init(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)

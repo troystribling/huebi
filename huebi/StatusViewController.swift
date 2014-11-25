@@ -14,8 +14,10 @@ class StatusViewController: UIViewController {
 
     struct MainStoryboard {
         static let BridgeConnectSegue   = "BridgeConnect"
+        static let FoundBridgesSegue    = "FoundBridges"
         static let BridgesSegue         = "Bridges"
-        static let AddBridgeSegue       = "AddBridge"
+        static let BeaconsSegue         = "Beacons"
+        static let NoBridgeFoundSegue   = "NoBridgeFound"
     }
     
     required init(coder aDecoder:NSCoder) {
@@ -23,23 +25,24 @@ class StatusViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        if DataStore.getBridge() == nil {
+        if DataStore.getSelectedBridge() == nil {
             HueClient.discoverBridge({(data) in
                 if data.count == 0 {
-                    self.presentViewController(UIAlertController.alertOnErrorWithMessage("No bridge found. Please enter bridge IP address.", handler:{(action) in
-                        self.performSegueWithIdentifier(MainStoryboard.AddBridgeSegue, sender:self)
+                    self.presentViewController(UIAlertController.alertOnErrorWithMessage("No Hue bridge found. Please enter bridge IP address.", handler:{(action) in
+                        self.performSegueWithIdentifier(MainStoryboard.NoBridgeFoundSegue, sender:self)
                     }), animated:true, completion:nil)
                 } else if data.count == 1 {
-                    self.performSegueWithIdentifier(MainStoryboard.BridgeConnectSegue, sender:self)
+                    self.presentViewController(UIAlertController.message("Hue Bridge Found", message:"You will have 30 second to authorize the application with the bridge by pressing the blue button after touching OK", handler:{(action) in
+                        self.performSegueWithIdentifier(MainStoryboard.BridgeConnectSegue, sender:self)
+                    }), animated:true, completion:nil)
                 } else {
-                    self.presentViewController(UIAlertController.message("Bridges Found", message:"Multiple bridges were found. Please select one", handler:{(action) in
+                    self.presentViewController(UIAlertController.message("Hue Bridges Found", message:"Multiple bridges were found. Please select one", handler:{(action) in
                         self.performSegueWithIdentifier(MainStoryboard.BridgesSegue, sender:self)
-                    }),
-                    animated:true, completion:nil)
+                    }), animated:true, completion:nil)
                 }
             }, discoveyFailed:{(error) in
-                self.presentViewController(UIAlertController.alertOnErrorWithMessage("Bridge discovery failed. Please enter bridge IP address.", handler:{(action) in
-                    self.performSegueWithIdentifier(MainStoryboard.AddBridgeSegue, sender:self)
+                self.presentViewController(UIAlertController.alertOnErrorWithMessage("Hue Bridge discovery failed. Please enter bridge IP address.", handler:{(action) in
+                    self.performSegueWithIdentifier(MainStoryboard.NoBridgeFoundSegue, sender:self)
                 }), animated:true, completion:nil)
             })
         }

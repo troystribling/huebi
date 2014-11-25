@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="1298" y="-123"/>
         </scene>
-        <!--Add Bridge View Controller-->
+        <!--No Bridge Found View Controller-->
         <scene sceneID="gAb-if-Dm0">
             <objects>
-                <viewController id="6rq-jU-nw9" customClass="AddBridgeViewController" customModule="huebi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6rq-jU-nw9" customClass="NoBridgeFoundViewController" customModule="huebi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D2M-UN-R8e"/>
                         <viewControllerLayoutGuide type="bottom" id="IKL-9E-MWc"/>
@@ -61,95 +61,127 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1r-Uh-28Z">
-                                <rect key="frame" x="20" y="100" width="560" height="40"/>
+                                <rect key="frame" x="20" y="135" width="560" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="shW-0F-HYs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6rq-jU-nw9" id="tmA-jo-8VY"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IP Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NDc-yc-ySb">
-                                <rect key="frame" x="20" y="160" width="560" height="40"/>
+                                <rect key="frame" x="20" y="185" width="560" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LfI-br-LO3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6rq-jU-nw9" id="TW2-iy-7ZM"/>
+                                </connections>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbQ-It-Jv3">
-                                <rect key="frame" x="0.0" y="20" width="600" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Bridge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt6-J1-Bbr">
-                                        <rect key="frame" x="20" y="13" width="560" height="23"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.85788892660000005" green="0.85788892660000005" blue="0.85788892660000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No bridge found. Please enter name and IP address of your bridge." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-oh-gaj">
+                                <rect key="frame" x="20" y="30" width="560" height="75"/>
                                 <constraints>
-                                    <constraint firstItem="kt6-J1-Bbr" firstAttribute="top" secondItem="sbQ-It-Jv3" secondAttribute="top" constant="13" id="UA3-ob-s7F"/>
-                                    <constraint firstItem="kt6-J1-Bbr" firstAttribute="leading" secondItem="sbQ-It-Jv3" secondAttribute="leading" constant="20" id="YuZ-Ai-0TI"/>
-                                    <constraint firstAttribute="height" constant="50" id="efq-Xa-uA7"/>
-                                    <constraint firstAttribute="trailing" secondItem="kt6-J1-Bbr" secondAttribute="trailing" constant="20" id="xi2-K3-IWe"/>
+                                    <constraint firstAttribute="height" constant="75" id="Ygq-sM-XHU"/>
                                 </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" red="0.84825501820000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="E1r-Uh-28Z" firstAttribute="top" secondItem="D2M-UN-R8e" secondAttribute="bottom" constant="80" id="4qm-EP-uB6"/>
-                            <constraint firstItem="sbQ-It-Jv3" firstAttribute="top" secondItem="D2M-UN-R8e" secondAttribute="bottom" id="6Y1-rZ-TDz"/>
-                            <constraint firstItem="NDc-yc-ySb" firstAttribute="top" secondItem="E1r-Uh-28Z" secondAttribute="bottom" constant="20" id="7DP-k6-yPR"/>
+                            <constraint firstItem="NDc-yc-ySb" firstAttribute="top" secondItem="E1r-Uh-28Z" secondAttribute="bottom" constant="10" id="7DP-k6-yPR"/>
                             <constraint firstItem="E1r-Uh-28Z" firstAttribute="leading" secondItem="cP0-L2-VpL" secondAttribute="leadingMargin" constant="4" id="7xa-m4-6wW"/>
+                            <constraint firstItem="cVt-oh-gaj" firstAttribute="leading" secondItem="cP0-L2-VpL" secondAttribute="leadingMargin" constant="4" id="Jg2-Aq-Dt4"/>
                             <constraint firstItem="NDc-yc-ySb" firstAttribute="leading" secondItem="cP0-L2-VpL" secondAttribute="leadingMargin" constant="4" id="OdV-sX-2nh"/>
-                            <constraint firstItem="sbQ-It-Jv3" firstAttribute="leading" secondItem="cP0-L2-VpL" secondAttribute="leadingMargin" constant="-16" id="Puh-Dh-bAi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sbQ-It-Jv3" secondAttribute="trailing" constant="-16" id="cHl-zl-JuH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NDc-yc-ySb" secondAttribute="trailing" constant="4" id="fyE-eq-xW6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cVt-oh-gaj" secondAttribute="trailing" constant="4" id="iUu-0M-7Zy"/>
+                            <constraint firstItem="cVt-oh-gaj" firstAttribute="top" secondItem="D2M-UN-R8e" secondAttribute="bottom" constant="10" id="joH-lP-WUZ"/>
+                            <constraint firstItem="E1r-Uh-28Z" firstAttribute="top" secondItem="cVt-oh-gaj" secondAttribute="bottom" constant="30" id="wjO-54-LHU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E1r-Uh-28Z" secondAttribute="trailing" constant="4" id="ykB-mG-0Oi"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ipTextField" destination="NDc-yc-ySb" id="uSe-IN-1LV"/>
-                        <outlet property="nameTextField" destination="E1r-Uh-28Z" id="kYB-tu-4FS"/>
+                        <outlet property="ipTextField" destination="NDc-yc-ySb" id="nR6-cP-s2y"/>
+                        <outlet property="nameTextField" destination="E1r-Uh-28Z" id="Ygl-im-sku"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="NoBridgeBridgeConnect" id="pj7-d1-6Vi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39B-9X-XJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="578"/>
+            <point key="canvasLocation" x="1306" y="590"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="lf7-X2-vou">
+        <!--Found Bridges View Controller-->
+        <scene sceneID="y03-sA-39L">
             <objects>
-                <tableViewController id="AEg-Cp-3PG" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="wNX-Gs-R0H">
+                <viewController id="Sud-T4-9o5" customClass="FoundBridgesViewController" customModule="huebi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hdl-Wh-9kn"/>
+                        <viewControllerLayoutGuide type="bottom" id="bNE-MA-KZl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W1a-wE-6EZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="O27-94-jVx">
+                                <rect key="frame" x="0.0" y="100" width="600" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BridgesCell" rowHeight="80" id="eti-4T-wqu">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eti-4T-wqu" id="1fa-tf-Tj7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.0.1.2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7O-NY-WuT">
+                                                    <rect key="frame" x="20" y="36" width="540" height="27"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hue Bridge" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvN-Kt-fYc">
+                                                    <rect key="frame" x="20" y="17" width="540" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiple bridges were found please select only one." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ffQ-ww-eeo">
+                                <rect key="frame" x="20" y="30" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nRh-fR-Wrf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" red="0.84825501820000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BridgeCell" textLabel="SbH-yF-zgd" rowHeight="60" style="IBUITableViewCellStyleDefault" id="FSu-9r-lDa">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FSu-9r-lDa" id="C4B-3v-gBN">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Bridge" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SbH-yF-zgd">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="AEg-Cp-3PG" id="kLU-D3-ZER"/>
-                            <outlet property="delegate" destination="AEg-Cp-3PG" id="ZKe-yU-1MS"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HBa-MW-QLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="bNE-MA-KZl" firstAttribute="top" secondItem="O27-94-jVx" secondAttribute="bottom" id="9Vy-Fs-T3E"/>
+                            <constraint firstItem="ffQ-ww-eeo" firstAttribute="top" secondItem="Hdl-Wh-9kn" secondAttribute="bottom" constant="10" id="BzF-VT-xq3"/>
+                            <constraint firstItem="ffQ-ww-eeo" firstAttribute="leading" secondItem="W1a-wE-6EZ" secondAttribute="leadingMargin" constant="4" id="HBF-Pd-u2t"/>
+                            <constraint firstItem="O27-94-jVx" firstAttribute="top" secondItem="ffQ-ww-eeo" secondAttribute="bottom" constant="20" id="Jrj-pb-U4d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O27-94-jVx" secondAttribute="trailing" constant="-16" id="Q1U-kI-rN3"/>
+                            <constraint firstItem="O27-94-jVx" firstAttribute="leading" secondItem="W1a-wE-6EZ" secondAttribute="leadingMargin" constant="-16" id="S5t-KN-Fw9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ffQ-ww-eeo" secondAttribute="trailing" constant="4" id="cuh-a8-YEB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="FoundBridgesBridgeConnect" id="KUo-DT-m2A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cpm-jT-SuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="1322"/>
+            <point key="canvasLocation" x="1306" y="1323"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="P3W-SB-TdE">
@@ -174,18 +206,189 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="BridgeConnect" id="GlC-NP-Sf5"/>
-                        <segue destination="6rq-jU-nw9" kind="presentation" identifier="AddBridge" id="Gbo-Wc-GgZ"/>
-                        <segue destination="AEg-Cp-3PG" kind="presentation" identifier="Bridges" id="0N6-Uj-u6R"/>
+                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="BridgeConnect" modalTransitionStyle="flipHorizontal" id="GlC-NP-Sf5"/>
+                        <segue destination="6rq-jU-nw9" kind="presentation" identifier="NoBridgeFound" modalTransitionStyle="flipHorizontal" id="Gbo-Wc-GgZ"/>
+                        <segue destination="D4a-wq-yI6" kind="show" identifier="Bridges" id="lr4-0e-Ee1"/>
+                        <segue destination="QvL-m1-aan" kind="show" identifier="Beacons" id="hUa-jP-Tg0"/>
+                        <segue destination="Sud-T4-9o5" kind="show" identifier="FoundBridges" id="XNf-Wz-Gp7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VD2-nf-4li" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="581" y="578"/>
         </scene>
+        <!--Bridges-->
+        <scene sceneID="7c6-Bb-inL">
+            <objects>
+                <tableViewController id="0bL-9Q-DqI" customClass="BridgesViewController" customModule="huebi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DY7-FT-0ag">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BridgeCell" id="Zj7-lX-Dsi">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zj7-lX-Dsi" id="3lj-Vt-teW">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0bL-9Q-DqI" id="Bov-DX-bPx"/>
+                            <outlet property="delegate" destination="0bL-9Q-DqI" id="Tze-EL-ddG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Bridges" id="5bM-e4-uC3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uDh-XZ-n5o">
+                            <connections>
+                                <segue destination="lPZ-Kh-bHL" kind="show" identifier="AddBridge" id="72E-Av-Nee"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evO-nL-KzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="2841"/>
+        </scene>
+        <!--Beacons-->
+        <scene sceneID="z51-1E-gEm">
+            <objects>
+                <tableViewController id="9fp-Tn-p7K" customClass="BeaconsViewController" customModule="huebi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ret-Je-s8v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BeaconCell" id="5th-mn-pPW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5th-mn-pPW" id="bZi-DC-eFg">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9fp-Tn-p7K" id="74h-p6-OfU"/>
+                            <outlet property="delegate" destination="9fp-Tn-p7K" id="cJC-AV-0mS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Beacons" id="B7j-cU-ZXr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BvT-y6-T8k">
+                            <connections>
+                                <segue destination="Rhi-r6-52i" kind="show" id="U92-AN-oBO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXq-id-U8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="2841"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Ad-mO-Xct">
+            <objects>
+                <navigationController id="QvL-m1-aan" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FSf-AG-Ucl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9fp-Tn-p7K" kind="relationship" relationship="rootViewController" id="qPt-ky-I7b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qj2-11-E0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="2053"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PDQ-yu-P9l">
+            <objects>
+                <navigationController id="D4a-wq-yI6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JiC-Du-e1i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0bL-9Q-DqI" kind="relationship" relationship="rootViewController" id="VjO-CO-RSU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rNc-cQ-ER8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="2053"/>
+        </scene>
+        <!--Add Bridge-->
+        <scene sceneID="bsD-4q-ieP">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHV-uS-aNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="lPZ-Kh-bHL" customClass="AddBridgeViewController" customModule="huebi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sUm-cn-Rbz"/>
+                        <viewControllerLayoutGuide type="bottom" id="frr-av-zwJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dku-Qp-UfH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-CY-Ek6">
+                                <rect key="frame" x="20" y="100" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dQY-xY-IGv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IP Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Daf-3K-cbf">
+                                <rect key="frame" x="20" y="160" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IxS-NR-cjW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dd1-CY-Ek6" firstAttribute="top" secondItem="sUm-cn-Rbz" secondAttribute="bottom" constant="36" id="5Ar-7d-qLS"/>
+                            <constraint firstItem="Daf-3K-cbf" firstAttribute="top" secondItem="Dd1-CY-Ek6" secondAttribute="bottom" constant="20" id="MFi-6m-pUt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dd1-CY-Ek6" secondAttribute="trailing" constant="4" id="VMb-if-j61"/>
+                            <constraint firstItem="Daf-3K-cbf" firstAttribute="leading" secondItem="Dku-Qp-UfH" secondAttribute="leadingMargin" constant="4" id="fYH-2D-qMC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Daf-3K-cbf" secondAttribute="trailing" constant="4" id="wpj-fA-QIG"/>
+                            <constraint firstItem="Dd1-CY-Ek6" firstAttribute="leading" secondItem="Dku-Qp-UfH" secondAttribute="leadingMargin" constant="4" id="yKO-xq-pSs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Bridge" id="r5m-NE-XhL"/>
+                    <connections>
+                        <outlet property="ipTextField" destination="Daf-3K-cbf" id="uMX-3O-3ZI"/>
+                        <outlet property="nameTextField" destination="Dd1-CY-Ek6" id="DDD-N7-kWe"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="911" y="3639"/>
+        </scene>
+        <!--Add Beacon-->
+        <scene sceneID="UMt-55-s6n">
+            <objects>
+                <viewController id="Rhi-r6-52i" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RqV-Rw-nrP"/>
+                        <viewControllerLayoutGuide type="bottom" id="SnL-ZJ-Edx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9NJ-fJ-Mt7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Beacon" id="i6E-TD-4AG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANZ-Qu-J5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="3621"/>
+        </scene>
     </scenes>
     <resources>
         <image name="PressSmartbridge" width="516" height="475"/>
         <image name="StatusEnabled" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KUo-DT-m2A"/>
+    </inferredMetricsTieBreakers>
 </document>

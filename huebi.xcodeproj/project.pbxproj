@@ -14,6 +14,9 @@
 		055F90471A1A5BA200A2D808 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 055F90401A1A5AF800A2D808 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		055FA2AF1A1BB1BB0042D2A3 /* HueClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */; };
 		055FA2B71A1E53960042D2A3 /* BridgeConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */; };
+		05BB2BE11A24FF4900D593AE /* FoundBridgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB2BE01A24FF4900D593AE /* FoundBridgesViewController.swift */; };
+		05BB2BE31A25011200D593AE /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB2BE21A25011200D593AE /* ProgressView.swift */; };
+		05BB2BE51A25037C00D593AE /* NoBridgeFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB2BE41A25037C00D593AE /* NoBridgeFoundViewController.swift */; };
 		05CDA6CA1A192336003163A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDA6C91A192336003163A8 /* AppDelegate.swift */; };
 		05CDA6CF1A192336003163A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6CD1A192336003163A8 /* Main.storyboard */; };
 		05CDA6D11A192336003163A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6D01A192336003163A8 /* Images.xcassets */; };
@@ -27,7 +30,7 @@
 		05D4F6141A22BFCE0027EA62 /* BridgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6131A22BFCE0027EA62 /* BridgesViewController.swift */; };
 		05D4F6161A22C2B30027EA62 /* AddBridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6151A22C2B30027EA62 /* AddBridgeViewController.swift */; };
 		05D4F6181A22C4600027EA62 /* AddBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6171A22C4600027EA62 /* AddBeaconViewController.swift */; };
-		05D4F61A1A22C93E0027EA62 /* BeaconsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6191A22C93E0027EA62 /* BeaconsTableViewController.swift */; };
+		05D4F61A1A22C93E0027EA62 /* BeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6191A22C93E0027EA62 /* BeaconsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +121,9 @@
 		055F903A1A1A5AF800A2D808 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = External/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueClient.swift; sourceTree = "<group>"; };
 		055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeConnectViewController.swift; sourceTree = "<group>"; };
+		05BB2BE01A24FF4900D593AE /* FoundBridgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundBridgesViewController.swift; sourceTree = "<group>"; };
+		05BB2BE21A25011200D593AE /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		05BB2BE41A25037C00D593AE /* NoBridgeFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoBridgeFoundViewController.swift; sourceTree = "<group>"; };
 		05CDA6C41A192336003163A8 /* huebi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = huebi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CDA6C81A192336003163A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05CDA6C91A192336003163A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,7 +141,7 @@
 		05D4F6131A22BFCE0027EA62 /* BridgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgesViewController.swift; sourceTree = "<group>"; };
 		05D4F6151A22C2B30027EA62 /* AddBridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBridgeViewController.swift; sourceTree = "<group>"; };
 		05D4F6171A22C4600027EA62 /* AddBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBeaconViewController.swift; sourceTree = "<group>"; };
-		05D4F6191A22C93E0027EA62 /* BeaconsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconsTableViewController.swift; sourceTree = "<group>"; };
+		05D4F6191A22C93E0027EA62 /* BeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +252,8 @@
 				055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */,
 				05D4F6131A22BFCE0027EA62 /* BridgesViewController.swift */,
 				055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */,
+				05BB2BE01A24FF4900D593AE /* FoundBridgesViewController.swift */,
+				05BB2BE41A25037C00D593AE /* NoBridgeFoundViewController.swift */,
 			);
 			name = Bridge;
 			sourceTree = "<group>";
@@ -254,7 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				05D4F6171A22C4600027EA62 /* AddBeaconViewController.swift */,
-				05D4F6191A22C93E0027EA62 /* BeaconsTableViewController.swift */,
+				05D4F6191A22C93E0027EA62 /* BeaconsViewController.swift */,
 			);
 			name = Beacons;
 			sourceTree = "<group>";
@@ -265,6 +273,7 @@
 				053144DF1A23C198006523BD /* Alamofire-SwiftyJSON.swift */,
 				05348D9C1A1EED1B009726B9 /* DataStore.swift */,
 				05D4F60A1A2247FC0027EA62 /* Notify.swift */,
+				05BB2BE21A25011200D593AE /* ProgressView.swift */,
 				053144DD1A23C134006523BD /* SwiftyJSON.swift */,
 				05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */,
 			);
@@ -418,11 +427,14 @@
 			files = (
 				05D4F6121A22851D0027EA62 /* StatusViewController.swift in Sources */,
 				055FA2AF1A1BB1BB0042D2A3 /* HueClient.swift in Sources */,
+				05BB2BE31A25011200D593AE /* ProgressView.swift in Sources */,
+				05BB2BE51A25037C00D593AE /* NoBridgeFoundViewController.swift in Sources */,
+				05BB2BE11A24FF4900D593AE /* FoundBridgesViewController.swift in Sources */,
 				05D4F6181A22C4600027EA62 /* AddBeaconViewController.swift in Sources */,
 				053144DE1A23C134006523BD /* SwiftyJSON.swift in Sources */,
 				053144E01A23C198006523BD /* Alamofire-SwiftyJSON.swift in Sources */,
 				05D4F60D1A2247FC0027EA62 /* UIAlertControllerExtensions.swift in Sources */,
-				05D4F61A1A22C93E0027EA62 /* BeaconsTableViewController.swift in Sources */,
+				05D4F61A1A22C93E0027EA62 /* BeaconsViewController.swift in Sources */,
 				05D4F60C1A2247FC0027EA62 /* Notify.swift in Sources */,
 				055FA2B71A1E53960042D2A3 /* BridgeConnectViewController.swift in Sources */,
 				05D4F6141A22BFCE0027EA62 /* BridgesViewController.swift in Sources */,

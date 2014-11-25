@@ -1,14 +1,14 @@
 //
-//  AddBridgeViewController.swift
+//  NoBridgeFoundViewController.swift
 //  huebi
 //
-//  Created by Troy Stribling on 11/23/14.
+//  Created by Troy Stribling on 11/25/14.
 //  Copyright (c) 2014 gnos.us. All rights reserved.
 //
 
 import UIKit
 
-class AddBridgeViewController: UITableViewController, UITextFieldDelegate {
+class NoBridgeFoundViewController: UIViewController {
 
     @IBOutlet var nameTextField : UITextField!
     @IBOutlet var ipTextField   : UITextField!
@@ -20,7 +20,7 @@ class AddBridgeViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func viewWillAppear(animated:Bool) {
         super.viewWillAppear(animated)
     }
@@ -31,9 +31,10 @@ class AddBridgeViewController: UITableViewController, UITextFieldDelegate {
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender:AnyObject?) {
     }
-
+    
     // UITextFieldDelegate
     func textFieldShouldReturn(textField:UITextField) -> Bool {
         return true
     }
+    
 }
