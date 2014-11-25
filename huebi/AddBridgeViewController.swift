@@ -8,8 +8,11 @@
 
 import UIKit
 
-class AddBridgeViewController: UIViewController {
+class AddBridgeViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet var nameTextField : UITextField!
+    @IBOutlet var ipTextField   : UITextField!
+    
     required init(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)
     }
@@ -26,7 +29,11 @@ class AddBridgeViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue:UIStoryboardSegue, sender:AnyObject?) {
     }
 
+    // UITextFieldDelegate
+    func textFieldShouldReturn(textField:UITextField) -> Bool {
+        return true
+    }
 }

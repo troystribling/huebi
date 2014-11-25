@@ -28,4 +28,10 @@ extension UIAlertController {
         return alert
     }
 
+    class func message(title:String, message:String, handler:((UIAlertAction!) -> Void)? = nil) -> UIAlertController {
+        var alert = UIAlertController(title:title, message:message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:handler))
+        return alert
+    }
+
 }

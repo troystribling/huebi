@@ -10,6 +10,10 @@ import UIKit
 
 class BridgesViewController: UITableViewController {
 
+    struct MainStoryboard {
+        static let BridgeCell = "BridgeCell"
+    }
+    
     required init(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)
     }
@@ -38,7 +42,7 @@ class BridgesViewController: UITableViewController {
     }
 
     override func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(MainStoryboard.BridgeCell, forIndexPath: indexPath) as UITableViewCell
         return cell
     }
 

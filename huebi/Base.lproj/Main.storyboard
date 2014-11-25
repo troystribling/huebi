@@ -46,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298" y="193"/>
+            <point key="canvasLocation" x="1298" y="-123"/>
         </scene>
         <!--Add Bridge View Controller-->
         <scene sceneID="gAb-if-Dm0">
@@ -59,12 +59,97 @@
                     <view key="view" contentMode="scaleToFill" id="cP0-L2-VpL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1r-Uh-28Z">
+                                <rect key="frame" x="20" y="100" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="shW-0F-HYs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IP Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NDc-yc-ySb">
+                                <rect key="frame" x="20" y="160" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LfI-br-LO3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbQ-It-Jv3">
+                                <rect key="frame" x="0.0" y="20" width="600" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Bridge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt6-J1-Bbr">
+                                        <rect key="frame" x="20" y="13" width="559.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85788892660000005" green="0.85788892660000005" blue="0.85788892660000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="kt6-J1-Bbr" firstAttribute="leading" secondItem="sbQ-It-Jv3" secondAttribute="leading" constant="20" id="5Fl-np-RxK"/>
+                                    <constraint firstAttribute="width" constant="600" id="Il1-Z1-INf"/>
+                                    <constraint firstAttribute="height" constant="50" id="gdd-77-1d6"/>
+                                    <constraint firstAttribute="centerY" secondItem="kt6-J1-Bbr" secondAttribute="centerY" constant="0.75" id="kj3-a2-Ftw"/>
+                                    <constraint firstAttribute="trailing" secondItem="kt6-J1-Bbr" secondAttribute="trailing" constant="20.5" id="npT-7p-7C5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E1r-Uh-28Z" firstAttribute="top" secondItem="D2M-UN-R8e" secondAttribute="bottom" constant="80" id="4qm-EP-uB6"/>
+                            <constraint firstItem="NDc-yc-ySb" firstAttribute="top" secondItem="E1r-Uh-28Z" secondAttribute="bottom" constant="20" id="7DP-k6-yPR"/>
+                            <constraint firstItem="E1r-Uh-28Z" firstAttribute="leading" secondItem="cP0-L2-VpL" secondAttribute="leadingMargin" constant="4" id="7xa-m4-6wW"/>
+                            <constraint firstItem="sbQ-It-Jv3" firstAttribute="top" secondItem="D2M-UN-R8e" secondAttribute="bottom" id="HLb-Rt-Dzd"/>
+                            <constraint firstItem="NDc-yc-ySb" firstAttribute="leading" secondItem="cP0-L2-VpL" secondAttribute="leadingMargin" constant="4" id="OdV-sX-2nh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NDc-yc-ySb" secondAttribute="trailing" constant="4" id="fyE-eq-xW6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sbQ-It-Jv3" secondAttribute="trailing" constant="-16" id="kzV-20-Fft"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E1r-Uh-28Z" secondAttribute="trailing" constant="4" id="ykB-mG-0Oi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ipTextField" destination="NDc-yc-ySb" id="uSe-IN-1LV"/>
+                        <outlet property="nameTextField" destination="E1r-Uh-28Z" id="kYB-tu-4FS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39B-9X-XJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298" y="926"/>
+            <point key="canvasLocation" x="1306" y="578"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="lf7-X2-vou">
+            <objects>
+                <tableViewController id="AEg-Cp-3PG" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="wNX-Gs-R0H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BridgeCell" textLabel="SbH-yF-zgd" rowHeight="60" style="IBUITableViewCellStyleDefault" id="FSu-9r-lDa">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FSu-9r-lDa" id="C4B-3v-gBN">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Bridge" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SbH-yF-zgd">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AEg-Cp-3PG" id="kLU-D3-ZER"/>
+                            <outlet property="delegate" destination="AEg-Cp-3PG" id="ZKe-yU-1MS"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBa-MW-QLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="1322"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="P3W-SB-TdE">
@@ -91,6 +176,7 @@
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="presentation" identifier="BridgeConnect" id="GlC-NP-Sf5"/>
                         <segue destination="6rq-jU-nw9" kind="presentation" identifier="AddBridge" id="Gbo-Wc-GgZ"/>
+                        <segue destination="AEg-Cp-3PG" kind="presentation" identifier="Bridges" id="0N6-Uj-u6R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VD2-nf-4li" userLabel="First Responder" sceneMemberID="firstResponder"/>
