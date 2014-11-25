@@ -80,7 +80,7 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Bridge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt6-J1-Bbr">
-                                        <rect key="frame" x="20" y="13" width="559.5" height="22.5"/>
+                                        <rect key="frame" x="20" y="13" width="560" height="23"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -88,23 +88,23 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.85788892660000005" green="0.85788892660000005" blue="0.85788892660000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="kt6-J1-Bbr" firstAttribute="leading" secondItem="sbQ-It-Jv3" secondAttribute="leading" constant="20" id="5Fl-np-RxK"/>
-                                    <constraint firstAttribute="width" constant="600" id="Il1-Z1-INf"/>
-                                    <constraint firstAttribute="height" constant="50" id="gdd-77-1d6"/>
-                                    <constraint firstAttribute="centerY" secondItem="kt6-J1-Bbr" secondAttribute="centerY" constant="0.75" id="kj3-a2-Ftw"/>
-                                    <constraint firstAttribute="trailing" secondItem="kt6-J1-Bbr" secondAttribute="trailing" constant="20.5" id="npT-7p-7C5"/>
+                                    <constraint firstItem="kt6-J1-Bbr" firstAttribute="top" secondItem="sbQ-It-Jv3" secondAttribute="top" constant="13" id="UA3-ob-s7F"/>
+                                    <constraint firstItem="kt6-J1-Bbr" firstAttribute="leading" secondItem="sbQ-It-Jv3" secondAttribute="leading" constant="20" id="YuZ-Ai-0TI"/>
+                                    <constraint firstAttribute="height" constant="50" id="efq-Xa-uA7"/>
+                                    <constraint firstAttribute="trailing" secondItem="kt6-J1-Bbr" secondAttribute="trailing" constant="20" id="xi2-K3-IWe"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="E1r-Uh-28Z" firstAttribute="top" secondItem="D2M-UN-R8e" secondAttribute="bottom" constant="80" id="4qm-EP-uB6"/>
+                            <constraint firstItem="sbQ-It-Jv3" firstAttribute="top" secondItem="D2M-UN-R8e" secondAttribute="bottom" id="6Y1-rZ-TDz"/>
                             <constraint firstItem="NDc-yc-ySb" firstAttribute="top" secondItem="E1r-Uh-28Z" secondAttribute="bottom" constant="20" id="7DP-k6-yPR"/>
                             <constraint firstItem="E1r-Uh-28Z" firstAttribute="leading" secondItem="cP0-L2-VpL" secondAttribute="leadingMargin" constant="4" id="7xa-m4-6wW"/>
-                            <constraint firstItem="sbQ-It-Jv3" firstAttribute="top" secondItem="D2M-UN-R8e" secondAttribute="bottom" id="HLb-Rt-Dzd"/>
                             <constraint firstItem="NDc-yc-ySb" firstAttribute="leading" secondItem="cP0-L2-VpL" secondAttribute="leadingMargin" constant="4" id="OdV-sX-2nh"/>
+                            <constraint firstItem="sbQ-It-Jv3" firstAttribute="leading" secondItem="cP0-L2-VpL" secondAttribute="leadingMargin" constant="-16" id="Puh-Dh-bAi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sbQ-It-Jv3" secondAttribute="trailing" constant="-16" id="cHl-zl-JuH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NDc-yc-ySb" secondAttribute="trailing" constant="4" id="fyE-eq-xW6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sbQ-It-Jv3" secondAttribute="trailing" constant="-16" id="kzV-20-Fft"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E1r-Uh-28Z" secondAttribute="trailing" constant="4" id="ykB-mG-0Oi"/>
                         </constraints>
                     </view>
