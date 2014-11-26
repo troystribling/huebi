@@ -11,6 +11,7 @@ import UIKit
 class BridgeConnectViewController: UIViewController {
 
     @IBOutlet var bridgeConnectProgressView : UIProgressView!
+    @IBOutlet var bridgeIPAddress           : UILabel!
 
     var ipAddress : String!
 
