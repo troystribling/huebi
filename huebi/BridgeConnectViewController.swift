@@ -12,6 +12,8 @@ class BridgeConnectViewController: UIViewController {
 
     @IBOutlet var bridgeConnectProgressView : UIProgressView!
 
+    var ipAddress : String!
+
     required init(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)
     }

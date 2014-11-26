@@ -10,8 +10,8 @@ import UIKit
 
 class AddBridgeViewController: UITableViewController, UITextFieldDelegate {
 
-    @IBOutlet var nameTextField : UITextField!
-    @IBOutlet var ipTextField   : UITextField!
+    @IBOutlet var nameTextField         : UITextField!
+    @IBOutlet var ipAddressTextField    : UITextField!
     
     required init(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)
@@ -34,6 +34,18 @@ class AddBridgeViewController: UITableViewController, UITextFieldDelegate {
 
     // UITextFieldDelegate
     func textFieldShouldReturn(textField:UITextField) -> Bool {
-        return true
+        textField.resignFirstResponder()
+        let name = self.nameTextField.text
+        let ipAddress = self.ipAddressTextField.text
+        if name != nil && ipAddress != nil {
+            if !name!.isEmpty && !ipAddress!.isEmpty {
+                DataStore.addBridge(name!, ipAddress:ipAddress!)
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
     }
 }

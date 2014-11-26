@@ -11,7 +11,7 @@ import Foundation
 class DataStore {
     
     // Bridge
-    class func getBridges() -> [String:String]? {
+    class func getBridges() -> [String:String] {
         if let storedBridge = NSUserDefaults.standardUserDefaults().dictionaryForKey("bridge") {
             var bridge = [String:String]()
             for (key, val) in storedBridge {
@@ -23,7 +23,7 @@ class DataStore {
             }
             return bridge
         } else {
-            return nil
+            return [:]
         }
     }
     
@@ -31,12 +31,18 @@ class DataStore {
         NSUserDefaults.standardUserDefaults().setObject(bridges, forKey:"bridge")
     }
     
+    class func addBridge(name:String, ipAddress:String) {
+        var bridges = self.getBridges()
+        bridges[ipAddress] = name
+        self.setBridges(bridges)
+    }
+    
     class func getSelectedBridge() -> String? {
          return NSUserDefaults.standardUserDefaults().stringForKey("selectedBridge")
     }
     
-    class func setSelectedBridge(bridge:String) {
-        NSUserDefaults.standardUserDefaults().setObject(bridge, forKey:"selectedBridge")
+    class func setSelectedBridge(ipAddress:String) {
+        NSUserDefaults.standardUserDefaults().setObject(ipAddress, forKey:"selectedBridge")
     }
 
     // Beacons

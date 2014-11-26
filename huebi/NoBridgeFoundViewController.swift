@@ -8,10 +8,14 @@
 
 import UIKit
 
-class NoBridgeFoundViewController: UIViewController {
+class NoBridgeFoundViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var nameTextField : UITextField!
-    @IBOutlet var ipTextField   : UITextField!
+    struct MainStoryBoard {
+        static let noBridgeBridgeConnectSegue = "NoBridgeBridgeConnect"
+    }
+    
+    @IBOutlet var nameTextField         : UITextField!
+    @IBOutlet var ipAddressTextField    : UITextField!
     
     required init(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)
@@ -30,11 +34,30 @@ class NoBridgeFoundViewController: UIViewController {
     }
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender:AnyObject?) {
+        if segue.identifier == MainStoryBoard.noBridgeBridgeConnectSegue {
+            if let ipAddress = self.ipAddressTextField.text {
+                let viewController = segue.destinationViewController as BridgeConnectViewController
+                viewController.ipAddress = self.ipAddressTextField.text
+            }
+        }
     }
     
     // UITextFieldDelegate
     func textFieldShouldReturn(textField:UITextField) -> Bool {
-        return true
+        textField.resignFirstResponder()
+        let name = self.nameTextField.text
+        let ipAddress = self.ipAddressTextField.text
+        if name != nil && ipAddress != nil {
+            if !name.isEmpty && !ipAddress.isEmpty {
+                DataStore.addBridge(name, ipAddress:ipAddress)
+                self.performSegueWithIdentifier(MainStoryBoard.noBridgeBridgeConnectSegue, sender:self)
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
     }
     
 }

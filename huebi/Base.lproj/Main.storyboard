@@ -83,7 +83,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No bridge found. Please enter name and IP address of your bridge." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-oh-gaj">
-                                <rect key="frame" x="20" y="30" width="560" height="75"/>
+                                <rect key="frame" x="20" y="40" width="560" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="Ygq-sM-XHU"/>
                                 </constraints>
@@ -100,13 +100,13 @@
                             <constraint firstItem="NDc-yc-ySb" firstAttribute="leading" secondItem="cP0-L2-VpL" secondAttribute="leadingMargin" constant="4" id="OdV-sX-2nh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NDc-yc-ySb" secondAttribute="trailing" constant="4" id="fyE-eq-xW6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cVt-oh-gaj" secondAttribute="trailing" constant="4" id="iUu-0M-7Zy"/>
-                            <constraint firstItem="cVt-oh-gaj" firstAttribute="top" secondItem="D2M-UN-R8e" secondAttribute="bottom" constant="10" id="joH-lP-WUZ"/>
-                            <constraint firstItem="E1r-Uh-28Z" firstAttribute="top" secondItem="cVt-oh-gaj" secondAttribute="bottom" constant="30" id="wjO-54-LHU"/>
+                            <constraint firstItem="cVt-oh-gaj" firstAttribute="top" secondItem="D2M-UN-R8e" secondAttribute="bottom" constant="20" id="joH-lP-WUZ"/>
+                            <constraint firstItem="E1r-Uh-28Z" firstAttribute="top" secondItem="cVt-oh-gaj" secondAttribute="bottom" constant="20" id="wjO-54-LHU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E1r-Uh-28Z" secondAttribute="trailing" constant="4" id="ykB-mG-0Oi"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ipTextField" destination="NDc-yc-ySb" id="nR6-cP-s2y"/>
+                        <outlet property="ipAddressTextField" destination="NDc-yc-ySb" id="VjT-U7-wVq"/>
                         <outlet property="nameTextField" destination="E1r-Uh-28Z" id="Ygl-im-sku"/>
                         <segue destination="vXZ-lx-hvc" kind="show" identifier="NoBridgeBridgeConnect" id="pj7-d1-6Vi"/>
                     </connections>
@@ -357,7 +357,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Bridge" id="r5m-NE-XhL"/>
                     <connections>
-                        <outlet property="ipTextField" destination="Daf-3K-cbf" id="uMX-3O-3ZI"/>
+                        <outlet property="ipAddressTextField" destination="Dd1-CY-Ek6" id="r4N-8U-Nb1"/>
                         <outlet property="nameTextField" destination="Dd1-CY-Ek6" id="DDD-N7-kWe"/>
                     </connections>
                 </viewController>
@@ -389,6 +389,6 @@
         <image name="StatusEnabled" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KUo-DT-m2A"/>
+        <segue reference="pj7-d1-6Vi"/>
     </inferredMetricsTieBreakers>
 </document>
