@@ -11,8 +11,6 @@ import BlueCapKit
 
 class StatusViewController: UIViewController {
 
-    var bridgeQueryResponse : JSON!
-    
     struct MainStoryboard {
         static let bridgeConnectSegue   = "BridgeConnect"
         static let foundBridgesSegue    = "FoundBridges"
@@ -32,6 +30,9 @@ class StatusViewController: UIViewController {
                 if data.count == 0 {
                     self.performSegueWithIdentifier(MainStoryboard.noBridgeFoundSegue, sender:self)
                 } else if data.count == 1 {
+                    let bridge = data[0]
+                    Logger.debug("StatusViewController#viewDidLoad: selected bridge: \(bridge)")
+//                    DataStore.setSelectedBridge(bridge["internalipaddress"])
                     self.performSegueWithIdentifier(MainStoryboard.bridgeConnectSegue, sender:self)
                 } else {
                     self.performSegueWithIdentifier(MainStoryboard.bridgesSegue, sender:self)

@@ -34,12 +34,6 @@ class NoBridgeFoundViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender:AnyObject?) {
-        if segue.identifier == MainStoryBoard.noBridgeBridgeConnectSegue {
-            if let ipAddress = self.ipAddressTextField.text {
-                let viewController = segue.destinationViewController as BridgeConnectViewController
-                viewController.ipAddress = self.ipAddressTextField.text
-            }
-        }
     }
     
     // UITextFieldDelegate

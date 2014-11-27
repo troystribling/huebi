@@ -12,7 +12,6 @@ import BlueCapKit
 class BridgeConnectViewController: UIViewController {
 
     @IBOutlet var authorizeButton   : UIButton!
-    var ipAddress                   : String!
 
     var username        = String.random(length:16)
     var deviceType      = UIDevice.currentDevice().name
@@ -48,19 +47,21 @@ class BridgeConnectViewController: UIViewController {
     }
 
     func createUser() {
-        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC))
-        dispatch_after(popTime, dispatch_get_main_queue()) {
-            HueClient.createUser(self.ipAddress, username:self.username, devicetype:self.deviceType,
-                createSuccess:{(data) in
-                    self.progressView.remove()
-                    Logger.debug("\(data)")
-                },
-                createFailed:{(error) in
-                    self.presentViewController(UIAlertController.alertOnError(error, handler:{(action) in
+        if let ipAddress = DataStore.getSelectedBridge() {
+            let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC))
+            dispatch_after(popTime, dispatch_get_main_queue()) {
+                HueClient.createUser(ipAddress, username:self.username, devicetype:self.deviceType,
+                    createSuccess:{(data) in
                         self.progressView.remove()
-                    }), animated:true, completion:nil)
-                }
-            )
+                        Logger.debug("\(data)")
+                    },
+                    createFailed:{(error) in
+                        self.presentViewController(UIAlertController.alertOnError(error, handler:{(action) in
+                            self.progressView.remove()
+                        }), animated:true, completion:nil)
+                    }
+                )
+            }
         }
     }
 }
