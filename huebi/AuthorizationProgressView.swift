@@ -40,18 +40,18 @@ class AuthorizationProgressView : UIView {
         self.init(frame:UIScreen.mainScreen().bounds)
     }
     
-    func show(count:Int) {
+    func show(count:Int, onComplete:Void->Void) {
         if let keyWindow =  UIApplication.sharedApplication().keyWindow {
-            self.show(count, view:keyWindow)
+            self.show(count, onComplete:onComplete, view:keyWindow)
         }
     }
     
-    func show(count:Int, view:UIView) {
+    func show(count:Int, onComplete:Void->Void, view:UIView) {
         if !self.displayed {
             self.displayed = true
             self.counterLabel.text = "\(count)"
             view.addSubview(self)
-            self.countdown(count)
+            self.countdown(count, onComplete:onComplete)
         }
     }
     
@@ -67,15 +67,15 @@ class AuthorizationProgressView : UIView {
         }
     }
     
-    func countdown(count:Int) {
+    func countdown(count:Int, onComplete:Void->Void) {
         if count > 0 {
             let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC))
             dispatch_after(popTime, dispatch_get_main_queue()) {
                 self.counterLabel.text = "\(count-1)"
-                self.countdown(count-1)
+                self.countdown(count-1, onComplete:onComplete)
             }
         } else {
-            self.remove()
+            onComplete()
         }
     }
 }

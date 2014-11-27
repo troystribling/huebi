@@ -23,13 +23,13 @@ class HueClient {
             }
     }
     
-    class func createUser(ipaddress:String, username:String, devicetype:String, createSuccess:()->(), createFailed:(error:NSError)->()) {
+    class func createUser(ipaddress:String, username:String, devicetype:String, createSuccess:(data:JSON)->(), createFailed:(error:NSError)->()) {
         Alamofire.request(.POST,"http://\(ipaddress)/api", parameters:["devicetype":devicetype, "userbname":username])
             .responseSwiftyJSON(){(_,_, data, error) in
                 if let error = error {
                     createFailed(error:error)
                 } else {
-                    createSuccess()
+                    createSuccess(data:data)
                 }
             }
     }

@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import BlueCapKit
 
 class BridgeConnectViewController: UIViewController {
 
-    @IBOutlet var authorizeButton  : UIButton!
-    var ipAddress : String!
+    @IBOutlet var authorizeButton   : UIButton!
+    var ipAddress                   : String!
+
+    var username        = String.random(length:16)
+    var deviceType      = UIDevice.currentDevice().name
+    var timerExpired    = false
     
     var progressView  = AuthorizationProgressView()
 
@@ -35,7 +40,27 @@ class BridgeConnectViewController: UIViewController {
     }
     
     @IBAction func authorize(sender:AnyObject?) {
-        self.progressView.show(30)
+        self.timerExpired = false
+        self.progressView.show(30){
+            self.timerExpired = true
+        }
+        self.createUser()
     }
 
+    func createUser() {
+        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC))
+        dispatch_after(popTime, dispatch_get_main_queue()) {
+            HueClient.createUser(self.ipAddress, username:self.username, devicetype:self.deviceType,
+                createSuccess:{(data) in
+                    self.progressView.remove()
+                    Logger.debug("\(data)")
+                },
+                createFailed:{(error) in
+                    self.presentViewController(UIAlertController.alertOnError(error, handler:{(action) in
+                        self.progressView.remove()
+                    }), animated:true, completion:nil)
+                }
+            )
+        }
+    }
 }
