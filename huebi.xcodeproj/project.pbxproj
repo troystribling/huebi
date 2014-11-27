@@ -15,7 +15,7 @@
 		055FA2AF1A1BB1BB0042D2A3 /* HueClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */; };
 		055FA2B71A1E53960042D2A3 /* BridgeConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */; };
 		05BB2BE11A24FF4900D593AE /* FoundBridgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB2BE01A24FF4900D593AE /* FoundBridgesViewController.swift */; };
-		05BB2BE31A25011200D593AE /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB2BE21A25011200D593AE /* ProgressView.swift */; };
+		05BB2BE31A25011200D593AE /* AuthorizationProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB2BE21A25011200D593AE /* AuthorizationProgressView.swift */; };
 		05BB2BE51A25037C00D593AE /* NoBridgeFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB2BE41A25037C00D593AE /* NoBridgeFoundViewController.swift */; };
 		05CDA6CA1A192336003163A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CDA6C91A192336003163A8 /* AppDelegate.swift */; };
 		05CDA6CF1A192336003163A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CDA6CD1A192336003163A8 /* Main.storyboard */; };
@@ -122,7 +122,7 @@
 		055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueClient.swift; sourceTree = "<group>"; };
 		055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeConnectViewController.swift; sourceTree = "<group>"; };
 		05BB2BE01A24FF4900D593AE /* FoundBridgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundBridgesViewController.swift; sourceTree = "<group>"; };
-		05BB2BE21A25011200D593AE /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		05BB2BE21A25011200D593AE /* AuthorizationProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationProgressView.swift; sourceTree = "<group>"; };
 		05BB2BE41A25037C00D593AE /* NoBridgeFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoBridgeFoundViewController.swift; sourceTree = "<group>"; };
 		05CDA6C41A192336003163A8 /* huebi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = huebi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CDA6C81A192336003163A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -249,10 +249,11 @@
 			isa = PBXGroup;
 			children = (
 				05D4F6151A22C2B30027EA62 /* AddBridgeViewController.swift */,
+				05BB2BE21A25011200D593AE /* AuthorizationProgressView.swift */,
 				055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */,
 				05D4F6131A22BFCE0027EA62 /* BridgesViewController.swift */,
-				055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */,
 				05BB2BE01A24FF4900D593AE /* FoundBridgesViewController.swift */,
+				055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */,
 				05BB2BE41A25037C00D593AE /* NoBridgeFoundViewController.swift */,
 			);
 			name = Bridge;
@@ -273,7 +274,6 @@
 				053144DF1A23C198006523BD /* Alamofire-SwiftyJSON.swift */,
 				05348D9C1A1EED1B009726B9 /* DataStore.swift */,
 				05D4F60A1A2247FC0027EA62 /* Notify.swift */,
-				05BB2BE21A25011200D593AE /* ProgressView.swift */,
 				053144DD1A23C134006523BD /* SwiftyJSON.swift */,
 				05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */,
 			);
@@ -427,7 +427,7 @@
 			files = (
 				05D4F6121A22851D0027EA62 /* StatusViewController.swift in Sources */,
 				055FA2AF1A1BB1BB0042D2A3 /* HueClient.swift in Sources */,
-				05BB2BE31A25011200D593AE /* ProgressView.swift in Sources */,
+				05BB2BE31A25011200D593AE /* AuthorizationProgressView.swift in Sources */,
 				05BB2BE51A25037C00D593AE /* NoBridgeFoundViewController.swift in Sources */,
 				05BB2BE11A24FF4900D593AE /* FoundBridgesViewController.swift in Sources */,
 				05D4F6181A22C4600027EA62 /* AddBeaconViewController.swift in Sources */,

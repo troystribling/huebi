@@ -10,10 +10,10 @@ import UIKit
 
 class BridgeConnectViewController: UIViewController {
 
-    @IBOutlet var bridgeConnectProgressView : UIProgressView!
-    @IBOutlet var authorizeButton           : UIButton!
-
+    @IBOutlet var authorizeButton  : UIButton!
     var ipAddress : String!
+    
+    var progressView  = AuthorizationProgressView()
 
     required init(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)
@@ -33,7 +33,9 @@ class BridgeConnectViewController: UIViewController {
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender:AnyObject?) {
     }
-
-    func updateProgressBar() {        
+    
+    @IBAction func authorize(sender:AnyObject?) {
+        self.progressView.show(30)
     }
+
 }

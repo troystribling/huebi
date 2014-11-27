@@ -17,15 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WD3-Kf-bML">
-                                <rect key="frame" x="30" y="555" width="540" height="2"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="H7d-X8-hE2"/>
-                                </constraints>
-                                <color key="progressTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="trackTintColor" red="0.85788892660000005" green="0.85788892660000005" blue="0.85788892660000005" alpha="1" colorSpace="calibratedRGB"/>
-                            </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To authorize touch Authorize and then touch the blue button on the bridge within 30 seconds." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OYN-Cl-EfY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To authorize touch Authorize and then touch the button on the bridge within 30 seconds." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OYN-Cl-EfY">
                                 <rect key="frame" x="20" y="40" width="560" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="ujo-wu-xZP"/>
@@ -35,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pck-mK-W5l">
-                                <rect key="frame" x="20" y="130" width="560" height="40"/>
+                                <rect key="frame" x="20" y="135" width="560" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Mxw-bV-X9T"/>
                                 </constraints>
@@ -44,32 +36,31 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="authorize:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ExD-W3-lWh"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PressSmartbridge" translatesAutoresizingMaskIntoConstraints="NO" id="r35-Nt-Loa">
-                                <rect key="frame" x="20" y="190" width="560" height="350"/>
+                                <rect key="frame" x="20" y="200" width="560" height="370"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="WD3-Kf-bML" secondAttribute="trailing" constant="14" id="8Ar-Xi-hhP"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="r35-Nt-Loa" secondAttribute="bottom" constant="30" id="59X-XS-OVH"/>
                             <constraint firstItem="pck-mK-W5l" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="B2m-In-iSh"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="WD3-Kf-bML" secondAttribute="bottom" constant="43" id="Ezw-DE-cDq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OYN-Cl-EfY" secondAttribute="trailing" constant="4" id="Sgf-6X-urO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r35-Nt-Loa" secondAttribute="trailing" constant="4" id="Tn8-d8-u4a"/>
                             <constraint firstAttribute="centerX" secondItem="r35-Nt-Loa" secondAttribute="centerX" id="g6f-KF-fpd"/>
-                            <constraint firstItem="pck-mK-W5l" firstAttribute="top" secondItem="OYN-Cl-EfY" secondAttribute="bottom" constant="10" id="gU6-3j-npy"/>
+                            <constraint firstItem="pck-mK-W5l" firstAttribute="top" secondItem="OYN-Cl-EfY" secondAttribute="bottom" constant="15" id="gU6-3j-npy"/>
                             <constraint firstItem="r35-Nt-Loa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="glQ-yB-7z8"/>
                             <constraint firstItem="OYN-Cl-EfY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="ibz-Yf-z2K"/>
-                            <constraint firstItem="WD3-Kf-bML" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="14" id="lKH-Sg-KX1"/>
-                            <constraint firstItem="r35-Nt-Loa" firstAttribute="top" secondItem="pck-mK-W5l" secondAttribute="bottom" constant="20" id="mnf-2r-JX9"/>
-                            <constraint firstItem="WD3-Kf-bML" firstAttribute="top" secondItem="r35-Nt-Loa" secondAttribute="bottom" constant="15" id="n31-Qg-GW3"/>
+                            <constraint firstItem="r35-Nt-Loa" firstAttribute="top" secondItem="pck-mK-W5l" secondAttribute="bottom" constant="25" id="mnf-2r-JX9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pck-mK-W5l" secondAttribute="trailing" constant="4" id="qIP-lT-Fxe"/>
                             <constraint firstItem="OYN-Cl-EfY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="vub-Q0-ywR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="authorizeButton" destination="pck-mK-W5l" id="noU-52-DQb"/>
-                        <outlet property="bridgeConnectProgressView" destination="WD3-Kf-bML" id="h3I-WW-t6N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -159,7 +150,7 @@
                                 <rect key="frame" x="0.0" y="100" width="600" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BridgesCell" rowHeight="80" id="eti-4T-wqu">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoundBridgeCell" rowHeight="80" id="eti-4T-wqu">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eti-4T-wqu" id="1fa-tf-Tj7">
@@ -181,6 +172,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Sud-T4-9o5" id="snJ-9d-t27"/>
+                                    <outlet property="delegate" destination="Sud-T4-9o5" id="I3H-lu-meO"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiple bridges were found please select only one." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ffQ-ww-eeo">
                                 <rect key="frame" x="20" y="30" width="560" height="50"/>
