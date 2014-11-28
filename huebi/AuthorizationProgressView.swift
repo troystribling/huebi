@@ -25,9 +25,11 @@ class AuthorizationProgressView : UIView {
     
     override init(frame:CGRect) {
         super.init(frame:frame)
-        self.counterLabel = UILabel(frame:CGRectMake(self.center.x, self.center.y, 50, 50))
-        self.counterLabel.font = UIFont(name:"Menlo", size:35)
+        self.counterLabel = UILabel(frame:CGRectMake(0.0, 0.0, 100, 100))
         self.counterLabel.center = self.center
+        self.counterLabel.font = UIFont(name:"Menlo", size:65)
+        self.counterLabel.center = self.center
+        self.counterLabel.textAlignment = .Center
         self.counterLabel.textColor = UIColor.redColor()
         self.backgroundView = UIView(frame:frame)
         self.backgroundView.backgroundColor = UIColor.whiteColor()

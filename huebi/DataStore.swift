@@ -12,7 +12,7 @@ class DataStore {
     
     // Bridge
     class func getBridges() -> [String:String] {
-        if let storedBridge = NSUserDefaults.standardUserDefaults().dictionaryForKey("bridge") {
+        if let storedBridge = NSUserDefaults.standardUserDefaults().dictionaryForKey("bridges") {
             var bridge = [String:String]()
             for (key, val) in storedBridge {
                 if let key = key as? String {
@@ -28,7 +28,15 @@ class DataStore {
     }
     
     class func setBridges(bridges:[String:String]) {
-        NSUserDefaults.standardUserDefaults().setObject(bridges, forKey:"bridge")
+        NSUserDefaults.standardUserDefaults().setObject(bridges, forKey:"bridges")
+    }
+    
+    class func addBridge(bridge:JSON) {
+        if let ipAddress = bridge["internalipaddress"].string {
+            if let name = bridge["name"].string {
+                self.addBridge(name, ipAddress:ipAddress)
+            }
+        }
     }
     
     class func addBridge(name:String, ipAddress:String) {
@@ -44,6 +52,15 @@ class DataStore {
     class func setSelectedBridge(ipAddress:String) {
         NSUserDefaults.standardUserDefaults().setObject(ipAddress, forKey:"selectedBridge")
     }
+
+    class func getUsername() -> String? {
+        return NSUserDefaults.standardUserDefaults().stringForKey("username")
+    }
+    
+    class func setUsername(username:String) {
+        NSUserDefaults.standardUserDefaults().setObject(username, forKey:"username")
+    }
+    
 
     // Beacons
     class func getBeacons() -> [String:NSUUID] {
