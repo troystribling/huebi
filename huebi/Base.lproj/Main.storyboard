@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298" y="-123"/>
+            <point key="canvasLocation" x="1296" y="-162"/>
         </scene>
         <!--No Bridge Found View Controller-->
         <scene sceneID="gAb-if-Dm0">
@@ -229,7 +229,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="BridgeConnect" modalTransitionStyle="flipHorizontal" id="GlC-NP-Sf5"/>
+                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="BridgeConnectStatus" modalTransitionStyle="flipHorizontal" id="GlC-NP-Sf5"/>
                         <segue destination="6rq-jU-nw9" kind="presentation" identifier="NoBridgeFound" modalTransitionStyle="flipHorizontal" id="Gbo-Wc-GgZ"/>
                         <segue destination="D4a-wq-yI6" kind="show" identifier="Bridges" id="lr4-0e-Ee1"/>
                         <segue destination="QvL-m1-aan" kind="show" identifier="Beacons" id="hUa-jP-Tg0"/>
@@ -412,6 +412,6 @@
         <image name="StatusEnabled" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pj7-d1-6Vi"/>
+        <segue reference="GlC-NP-Sf5"/>
     </inferredMetricsTieBreakers>
 </document>
