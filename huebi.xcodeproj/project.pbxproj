@@ -11,7 +11,7 @@
 		053144E01A23C198006523BD /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053144DF1A23C198006523BD /* Alamofire-SwiftyJSON.swift */; };
 		05348D9D1A1EED1B009726B9 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05348D9C1A1EED1B009726B9 /* DataStore.swift */; };
 		053E72721A2799140046613C /* RandomString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053E72711A2799140046613C /* RandomString.swift */; };
-		054830381A29081B00067ADB /* FoundBeaconsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054830371A29081B00067ADB /* FoundBeaconsTableViewController.swift */; };
+		054830381A29081B00067ADB /* FoundBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054830371A29081B00067ADB /* FoundBeaconsViewController.swift */; };
 		055F90461A1A5BA200A2D808 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055F90401A1A5AF800A2D808 /* Alamofire.framework */; };
 		055F90471A1A5BA200A2D808 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 055F90401A1A5AF800A2D808 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		055FA2AF1A1BB1BB0042D2A3 /* HueClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */; };
@@ -26,6 +26,7 @@
 		05CDA6F61A192838003163A8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F51A192838003163A8 /* CoreBluetooth.framework */; };
 		05CDA6F91A192849003163A8 /* BlueCapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; };
 		05CDA6FB1A192B26003163A8 /* BlueCapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05D3B8DB1A2A5453008E794E /* FoundBeaconsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8DA1A2A5453008E794E /* FoundBeaconsCell.swift */; };
 		05D4F60C1A2247FC0027EA62 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60A1A2247FC0027EA62 /* Notify.swift */; };
 		05D4F60D1A2247FC0027EA62 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */; };
 		05D4F6121A22851D0027EA62 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6111A22851D0027EA62 /* StatusViewController.swift */; };
@@ -121,7 +122,7 @@
 		053144DF1A23C198006523BD /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		05348D9C1A1EED1B009726B9 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		053E72711A2799140046613C /* RandomString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomString.swift; sourceTree = "<group>"; };
-		054830371A29081B00067ADB /* FoundBeaconsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundBeaconsTableViewController.swift; sourceTree = "<group>"; };
+		054830371A29081B00067ADB /* FoundBeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundBeaconsViewController.swift; sourceTree = "<group>"; };
 		055F903A1A1A5AF800A2D808 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = External/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		055FA2AE1A1BB1BB0042D2A3 /* HueClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueClient.swift; sourceTree = "<group>"; };
 		055FA2B61A1E53960042D2A3 /* BridgeConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeConnectViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueCapKit.xcodeproj; path = External/BlueCap/BlueCapKit.xcodeproj; sourceTree = "<group>"; };
 		05CDA6F51A192838003163A8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		05CDA6F71A192841003163A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		05D3B8DA1A2A5453008E794E /* FoundBeaconsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundBeaconsCell.swift; sourceTree = "<group>"; };
 		05D4F60A1A2247FC0027EA62 /* Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
 		05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
 		05D4F6111A22851D0027EA62 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
@@ -268,7 +270,8 @@
 			children = (
 				05D4F6171A22C4600027EA62 /* AddBeaconViewController.swift */,
 				05D4F6191A22C93E0027EA62 /* BeaconsViewController.swift */,
-				054830371A29081B00067ADB /* FoundBeaconsTableViewController.swift */,
+				054830371A29081B00067ADB /* FoundBeaconsViewController.swift */,
+				05D3B8DA1A2A5453008E794E /* FoundBeaconsCell.swift */,
 			);
 			name = Beacons;
 			sourceTree = "<group>";
@@ -447,7 +450,8 @@
 				05348D9D1A1EED1B009726B9 /* DataStore.swift in Sources */,
 				05D4F6161A22C2B30027EA62 /* AddBridgeViewController.swift in Sources */,
 				05CDA6CA1A192336003163A8 /* AppDelegate.swift in Sources */,
-				054830381A29081B00067ADB /* FoundBeaconsTableViewController.swift in Sources */,
+				05D3B8DB1A2A5453008E794E /* FoundBeaconsCell.swift in Sources */,
+				054830381A29081B00067ADB /* FoundBeaconsViewController.swift in Sources */,
 				053E72721A2799140046613C /* RandomString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

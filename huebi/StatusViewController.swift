@@ -19,7 +19,15 @@ class StatusViewController: UIViewController {
         static let bridgesSegue         = "Bridges"
         static let beaconsSegue         = "Beacons"
         static let noBridgeFoundSegue   = "NoBridgeFound"
+        static let foundBeaconsSegue    = "FoundBeacond"
     }
+    
+    struct Beacon {
+        let uuid : NSUUID
+        let name : String
+    }
+    
+    let defaultBeacons = [Beacon(uuid:NSUUID(UUIDString:"B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, name:"estimote")]
     
     required init(coder aDecoder:NSCoder) {
         super.init(coder:aDecoder)
@@ -45,6 +53,10 @@ class StatusViewController: UIViewController {
                 self.performSegueWithIdentifier(MainStoryboard.noBridgeFoundSegue, sender:self)
             })
         }
+        if DataStore.getBeacons(DataStore.BeaconStore.selectedBeacons).isEmpty {
+            self.addDefaultBeacons()
+            self.performSegueWithIdentifier(MainStoryboard.foundBeaconsSegue, sender: self)
+        }
         super.viewDidLoad()
     }
     
@@ -64,6 +76,12 @@ class StatusViewController: UIViewController {
                     viewController.ipAddress = ipAddress
                 }
             }
+        }
+    }
+    
+    func addDefaultBeacons() {
+        for beacon in defaultBeacons {
+            DataStore.addBeacon(beacon.name, uuid:beacon.uuid, store:DataStore.BeaconStore.configuredBeacons)
         }
     }
 }

@@ -132,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39B-9X-XJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="590"/>
+            <point key="canvasLocation" x="1306" y="578"/>
         </scene>
         <!--Found Bridges View Controller-->
         <scene sceneID="y03-sA-39L">
@@ -147,7 +147,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="O27-94-jVx">
-                                <rect key="frame" x="0.0" y="100" width="600" height="500"/>
+                                <rect key="frame" x="0.0" y="105" width="600" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoundBridgeCell" rowHeight="80" id="eti-4T-wqu">
@@ -178,7 +178,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiple bridges were found please select only one." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ffQ-ww-eeo">
-                                <rect key="frame" x="20" y="30" width="560" height="50"/>
+                                <rect key="frame" x="20" y="40" width="560" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nRh-fR-Wrf"/>
                                 </constraints>
@@ -189,10 +189,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bNE-MA-KZl" firstAttribute="top" secondItem="O27-94-jVx" secondAttribute="bottom" id="9Vy-Fs-T3E"/>
-                            <constraint firstItem="ffQ-ww-eeo" firstAttribute="top" secondItem="Hdl-Wh-9kn" secondAttribute="bottom" constant="10" id="BzF-VT-xq3"/>
+                            <constraint firstItem="bNE-MA-KZl" firstAttribute="top" secondItem="O27-94-jVx" secondAttribute="bottom" constant="-5" id="9Vy-Fs-T3E"/>
+                            <constraint firstItem="ffQ-ww-eeo" firstAttribute="top" secondItem="Hdl-Wh-9kn" secondAttribute="bottom" constant="20" id="BzF-VT-xq3"/>
                             <constraint firstItem="ffQ-ww-eeo" firstAttribute="leading" secondItem="W1a-wE-6EZ" secondAttribute="leadingMargin" constant="4" id="HBF-Pd-u2t"/>
-                            <constraint firstItem="O27-94-jVx" firstAttribute="top" secondItem="ffQ-ww-eeo" secondAttribute="bottom" constant="20" id="Jrj-pb-U4d"/>
+                            <constraint firstItem="O27-94-jVx" firstAttribute="top" secondItem="ffQ-ww-eeo" secondAttribute="bottom" constant="15" id="Jrj-pb-U4d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O27-94-jVx" secondAttribute="trailing" constant="-16" id="Q1U-kI-rN3"/>
                             <constraint firstItem="O27-94-jVx" firstAttribute="leading" secondItem="W1a-wE-6EZ" secondAttribute="leadingMargin" constant="-16" id="S5t-KN-Fw9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ffQ-ww-eeo" secondAttribute="trailing" constant="4" id="cuh-a8-YEB"/>
@@ -204,7 +204,123 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cpm-jT-SuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="1323"/>
+            <point key="canvasLocation" x="1306" y="1319"/>
+        </scene>
+        <!--Found Beacons View Controller-->
+        <scene sceneID="2pM-A9-1yp">
+            <objects>
+                <viewController id="v7N-C3-LQh" customClass="FoundBeaconsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ac7-ZR-hZj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ik2-jf-LTF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IdR-LR-Dyh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-c7-3cX">
+                                <rect key="frame" x="0.0" y="105" width="600" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="FoundBeaconCell" rowHeight="101" id="4s8-Oi-UMJ" customClass="FoundBeaconsCell" customModule="huebi" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4s8-Oi-UMJ" id="tXn-A4-hPp">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="major:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQF-cH-9bD">
+                                                    <rect key="frame" x="20" y="35" width="55" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="655365" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f87-dl-oIq">
+                                                    <rect key="frame" x="76" y="35" width="65" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minor:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kS4-yF-6Iw">
+                                                    <rect key="frame" x="442" y="35" width="55" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="655365" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feV-AL-bQQ">
+                                                    <rect key="frame" x="498" y="35" width="55" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Proximity:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcf-Uw-fEA">
+                                                    <rect key="frame" x="20" y="63" width="121" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Imediate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-LO-uJJ">
+                                                    <rect key="frame" x="149" y="63" width="115" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B9407F30-F5F8-466E-AFF9-25556B57FE6D" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="c9N-dU-Tve">
+                                                    <rect key="frame" x="20" y="17" width="533" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="c9N-dU-Tve" firstAttribute="leading" secondItem="tXn-A4-hPp" secondAttribute="leadingMargin" constant="12" id="ND3-H1-9Qd"/>
+                                                <constraint firstItem="feV-AL-bQQ" firstAttribute="top" secondItem="tXn-A4-hPp" secondAttribute="topMargin" constant="27" id="XQd-tY-T80"/>
+                                                <constraint firstItem="feV-AL-bQQ" firstAttribute="trailing" secondItem="tXn-A4-hPp" secondAttribute="trailingMargin" id="fgu-T0-BTg"/>
+                                                <constraint firstItem="c9N-dU-Tve" firstAttribute="top" secondItem="tXn-A4-hPp" secondAttribute="topMargin" constant="9" id="tRj-Hu-f4t"/>
+                                                <constraint firstItem="kS4-yF-6Iw" firstAttribute="top" secondItem="tXn-A4-hPp" secondAttribute="topMargin" constant="27" id="yYg-LC-K1a"/>
+                                                <constraint firstItem="c9N-dU-Tve" firstAttribute="trailing" secondItem="tXn-A4-hPp" secondAttribute="trailingMargin" id="ycl-CB-8tY"/>
+                                                <constraint firstItem="feV-AL-bQQ" firstAttribute="leading" secondItem="kS4-yF-6Iw" secondAttribute="trailing" constant="2" id="zcP-VM-UHy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="majorLabel" destination="f87-dl-oIq" id="mBB-pE-2Oc"/>
+                                            <outlet property="minorLabel" destination="feV-AL-bQQ" id="o53-hz-jdr"/>
+                                            <outlet property="proximityLabel" destination="Y5V-LO-uJJ" id="lUO-ak-udW"/>
+                                            <outlet property="uuidLabel" destination="c9N-dU-Tve" id="os5-rx-Yih"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="v7N-C3-LQh" id="5b3-m2-x43"/>
+                                    <outlet property="delegate" destination="v7N-C3-LQh" id="wGK-La-6hW"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the beacons you would like to use. Allow some time for all to be detected." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lJo-Jy-s8i">
+                                <rect key="frame" x="20" y="40" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MTT-dO-d41"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x8J-c7-3cX" firstAttribute="leading" secondItem="IdR-LR-Dyh" secondAttribute="leadingMargin" constant="-16" id="Uan-Av-ZiR"/>
+                            <constraint firstItem="lJo-Jy-s8i" firstAttribute="leading" secondItem="IdR-LR-Dyh" secondAttribute="leadingMargin" constant="4" id="b25-dS-ScT"/>
+                            <constraint firstItem="lJo-Jy-s8i" firstAttribute="top" secondItem="ac7-ZR-hZj" secondAttribute="bottom" constant="20" id="ciM-lM-tmb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x8J-c7-3cX" secondAttribute="trailing" constant="-16" id="ifC-9w-qGE"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="x8J-c7-3cX" secondAttribute="bottom" constant="-5" id="nXq-N9-Vb4"/>
+                            <constraint firstItem="x8J-c7-3cX" firstAttribute="top" secondItem="lJo-Jy-s8i" secondAttribute="bottom" constant="15" id="uTi-ag-NlS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lJo-Jy-s8i" secondAttribute="trailing" constant="4" id="vit-g1-mjZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beaconsView" destination="x8J-c7-3cX" id="IFf-fB-H9G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bso-ZI-FgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581" y="-162"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="P3W-SB-TdE">
@@ -234,6 +350,7 @@
                         <segue destination="D4a-wq-yI6" kind="show" identifier="Bridges" id="lr4-0e-Ee1"/>
                         <segue destination="QvL-m1-aan" kind="show" identifier="Beacons" id="hUa-jP-Tg0"/>
                         <segue destination="Sud-T4-9o5" kind="show" identifier="FoundBridges" id="XNf-Wz-Gp7"/>
+                        <segue destination="v7N-C3-LQh" kind="show" identifier="FoundBeacons" id="JGf-be-b4c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VD2-nf-4li" userLabel="First Responder" sceneMemberID="firstResponder"/>
