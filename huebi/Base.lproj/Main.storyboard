@@ -209,7 +209,7 @@
         <!--Found Beacons View Controller-->
         <scene sceneID="2pM-A9-1yp">
             <objects>
-                <viewController id="v7N-C3-LQh" customClass="FoundBeaconsViewController" sceneMemberID="viewController">
+                <viewController id="v7N-C3-LQh" customClass="FoundBeaconsViewController" customModule="huebi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ac7-ZR-hZj"/>
                         <viewControllerLayoutGuide type="bottom" id="Ik2-jf-LTF"/>
@@ -293,7 +293,7 @@
                                     <outlet property="delegate" destination="v7N-C3-LQh" id="wGK-La-6hW"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the beacons you would like to use. Allow some time for all to be detected." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lJo-Jy-s8i">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the beacons you would like to use. Allow time for all to be detected." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lJo-Jy-s8i">
                                 <rect key="frame" x="20" y="40" width="560" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MTT-dO-d41"/>
@@ -350,7 +350,7 @@
                         <segue destination="D4a-wq-yI6" kind="show" identifier="Bridges" id="lr4-0e-Ee1"/>
                         <segue destination="QvL-m1-aan" kind="show" identifier="Beacons" id="hUa-jP-Tg0"/>
                         <segue destination="Sud-T4-9o5" kind="show" identifier="FoundBridges" id="XNf-Wz-Gp7"/>
-                        <segue destination="v7N-C3-LQh" kind="show" identifier="FoundBeacons" id="JGf-be-b4c"/>
+                        <segue destination="v7N-C3-LQh" kind="presentation" identifier="FoundBeacons" modalTransitionStyle="flipHorizontal" id="JGf-be-b4c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VD2-nf-4li" userLabel="First Responder" sceneMemberID="firstResponder"/>

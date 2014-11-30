@@ -14,12 +14,12 @@ class StatusViewController: UIViewController {
     var bridges : JSON?
     
     struct MainStoryboard {
-        static let bridgeConnectSegue   = "BridgeConnect"
+        static let bridgeConnectSegue   = "BridgeConnectStatus"
         static let foundBridgesSegue    = "FoundBridges"
         static let bridgesSegue         = "Bridges"
         static let beaconsSegue         = "Beacons"
         static let noBridgeFoundSegue   = "NoBridgeFound"
-        static let foundBeaconsSegue    = "FoundBeacond"
+        static let foundBeaconsSegue    = "FoundBeacons"
     }
     
     struct Beacon {
@@ -34,6 +34,11 @@ class StatusViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated:Bool) {
+        super.viewWillAppear(animated)
         if DataStore.getSelectedBridge() == nil {
             HueClient.discoverBridge({(data) in
                 Logger.debug("StatusViewController#viewDidLoad bridgeQueryResponse: \(data)")
@@ -49,22 +54,17 @@ class StatusViewController: UIViewController {
                 } else {
                     self.performSegueWithIdentifier(MainStoryboard.bridgesSegue, sender:self)
                 }
-            }, discoveyFailed:{(error) in
-                self.performSegueWithIdentifier(MainStoryboard.noBridgeFoundSegue, sender:self)
+                }, discoveyFailed:{(error) in
+                    self.performSegueWithIdentifier(MainStoryboard.noBridgeFoundSegue, sender:self)
             })
         }
         if DataStore.getBeacons(DataStore.BeaconStore.selectedBeacons).isEmpty {
             self.addDefaultBeacons()
             self.performSegueWithIdentifier(MainStoryboard.foundBeaconsSegue, sender: self)
         }
-        super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated:Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewWillDisappear(animated:Bool) {
+    override func viewDidDisappear(animated:Bool) {
         super.viewWillDisappear(animated)
     }
     

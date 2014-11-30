@@ -17,10 +17,20 @@ class FoundBeaconsViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet var beaconsView : UITableView!
 
-    var regions  = [BeaconRegion]()
+    var regions         = [BeaconRegion]()
     
     var beacons : [Beacon] {
-        return []
+        let reginBeacons = regions.reduce([Beacon]()){$0 + $1.beacons}
+        return sorted(reginBeacons, {(b1:Beacon, b2:Beacon) -> Bool in
+            switch b1.discoveredAt.compare(b2.discoveredAt) {
+            case .OrderedSame:
+                return true
+            case .OrderedDescending:
+                return false
+            case .OrderedAscending:
+                return true
+            }
+        })
     }
 
     required init(coder aDecoder:NSCoder) {
@@ -29,20 +39,28 @@ class FoundBeaconsViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let beaconManager = BeaconManager.sharedInstance
+        if beaconManager.isRanging() {
+            beaconManager.stopRangingAllBeacons()
+        }
+        if beaconManager.isMonitoring() {
+            beaconManager.stopMonitoringAllRegions()
+        }
+        self.startCongigRanging()
     }
     
-    override func viewWillAppear(animated:Bool) {
+    override func viewDidAppear(animated:Bool) {
         super.viewWillAppear(animated)
     }
     
-    override func viewWillDisappear(animated:Bool) {
+    override func viewDidDisappear(animated:Bool) {
         super.viewWillDisappear(animated)
     }
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender:AnyObject?) {
     }
     
-    func startMonitoring() {
+    func startCongigRanging() {
         for (uuid, name) in DataStore.getBeacons(DataStore.BeaconStore.configuredBeacons) {
             let region = BeaconRegion(proximityUUID:uuid, identifier:name) {(beaconRegion) in
                 beaconRegion.startMonitoringRegion = {
@@ -74,6 +92,7 @@ class FoundBeaconsViewController: UIViewController, UITableViewDelegate, UITable
                     self.beaconsView.reloadData()
                 }
             }
+            BeaconManager.sharedInstance.startMonitoringForRegion(region)
             self.regions.append(region)
         }
     }
@@ -88,7 +107,24 @@ class FoundBeaconsViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(MainStoryboard.foundBeaconCell, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(MainStoryboard.foundBeaconCell, forIndexPath: indexPath) as FoundBeaconsCell
+        let beacon = self.beacons[indexPath.row]
+        if let uuid = beacon.proximityUUID {
+            cell.uuidLabel.text = uuid.UUIDString
+        } else {
+            cell.uuidLabel.text = "Unknown"
+        }
+        if let major = beacon.major {
+            cell.majorLabel.text = "\(major)"
+        } else {
+            cell.majorLabel.text = "Unknown"
+        }
+        if let minor = beacon.minor {
+            cell.minorLabel.text = "\(minor)"
+        } else {
+            cell.minorLabel.text = "Unknown"
+        }
+        cell.proximityLabel.text = beacon.proximity.stringValue
         return cell
     }
 
