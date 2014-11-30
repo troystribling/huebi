@@ -36,6 +36,7 @@
 		05D3B8EF1A2AA141008E794E /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8E61A2AA141008E794E /* Sequence.swift */; };
 		05D3B8F01A2AA141008E794E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8E71A2AA141008E794E /* String.swift */; };
 		05D3B8F21A2AA1D5008E794E /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8F11A2AA1D5008E794E /* Int.swift */; };
+		05D3B8F51A2AF1E6008E794E /* BeaconRanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8F41A2AF1E6008E794E /* BeaconRanger.swift */; };
 		05D4F60C1A2247FC0027EA62 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60A1A2247FC0027EA62 /* Notify.swift */; };
 		05D4F60D1A2247FC0027EA62 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */; };
 		05D4F6121A22851D0027EA62 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F6111A22851D0027EA62 /* StatusViewController.swift */; };
@@ -160,6 +161,7 @@
 		05D3B8E71A2AA141008E794E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		05D3B8F11A2AA1D5008E794E /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		05D3B8F31A2AA589008E794E /* TestIt.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestIt.playground; sourceTree = "<group>"; };
+		05D3B8F41A2AF1E6008E794E /* BeaconRanger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconRanger.swift; sourceTree = "<group>"; };
 		05D4F60A1A2247FC0027EA62 /* Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
 		05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
 		05D4F6111A22851D0027EA62 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
@@ -307,9 +309,10 @@
 			isa = PBXGroup;
 			children = (
 				05D4F6171A22C4600027EA62 /* AddBeaconViewController.swift */,
+				05D3B8F41A2AF1E6008E794E /* BeaconRanger.swift */,
 				05D4F6191A22C93E0027EA62 /* BeaconsViewController.swift */,
-				054830371A29081B00067ADB /* FoundBeaconsViewController.swift */,
 				05D3B8DA1A2A5453008E794E /* FoundBeaconsCell.swift */,
+				054830371A29081B00067ADB /* FoundBeaconsViewController.swift */,
 			);
 			name = Beacons;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				05D3B8EF1A2AA141008E794E /* Sequence.swift in Sources */,
 				05BB2BE31A25011200D593AE /* AuthorizationProgressView.swift in Sources */,
 				05D3B8EB1A2AA141008E794E /* ExSwift.swift in Sources */,
+				05D3B8F51A2AF1E6008E794E /* BeaconRanger.swift in Sources */,
 				05BB2BE51A25037C00D593AE /* NoBridgeFoundViewController.swift in Sources */,
 				05BB2BE11A24FF4900D593AE /* FoundBridgesViewController.swift in Sources */,
 				05D4F6181A22C4600027EA62 /* AddBeaconViewController.swift in Sources */,

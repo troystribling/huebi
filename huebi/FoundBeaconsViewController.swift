@@ -46,21 +46,22 @@ class FoundBeaconsViewController: UIViewController, UITableViewDelegate, UITable
         if beaconManager.isMonitoring() {
             beaconManager.stopMonitoringAllRegions()
         }
-        self.startCongigRanging()
+        self.startConfigRanging()
     }
     
-    override func viewDidAppear(animated:Bool) {
+    override func viewWillAppear(animated:Bool) {
         super.viewWillAppear(animated)
     }
     
-    override func viewDidDisappear(animated:Bool) {
+    override func viewWillDisappear(animated:Bool) {
         super.viewWillDisappear(animated)
+        BeaconRanger.start()
     }
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender:AnyObject?) {
     }
     
-    func startCongigRanging() {
+    func startConfigRanging() {
         for (uuid, name) in DataStore.getBeacons(DataStore.BeaconStore.configuredBeacons) {
             let region = BeaconRegion(proximityUUID:uuid, identifier:name) {(beaconRegion) in
                 beaconRegion.startMonitoringRegion = {
@@ -96,7 +97,7 @@ class FoundBeaconsViewController: UIViewController, UITableViewDelegate, UITable
             self.regions.append(region)
         }
     }
-    
+ 
     // Delegates methods
     func numberOfSectionsInTableView(tableView:UITableView) -> Int {
         return 1
