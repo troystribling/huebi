@@ -26,16 +26,6 @@
 		05CDA6F91A192849003163A8 /* BlueCapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; };
 		05CDA6FB1A192B26003163A8 /* BlueCapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA6F01A1927FA003163A8 /* BlueCapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05D3B8DB1A2A5453008E794E /* FoundBeaconsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8DA1A2A5453008E794E /* FoundBeaconsCell.swift */; };
-		05D3B8E81A2AA141008E794E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8DF1A2AA141008E794E /* Array.swift */; };
-		05D3B8E91A2AA141008E794E /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8E01A2AA141008E794E /* Dictionary.swift */; };
-		05D3B8EA1A2AA141008E794E /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8E11A2AA141008E794E /* Double.swift */; };
-		05D3B8EB1A2AA141008E794E /* ExSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8E21A2AA141008E794E /* ExSwift.swift */; };
-		05D3B8EC1A2AA141008E794E /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8E31A2AA141008E794E /* Float.swift */; };
-		05D3B8ED1A2AA141008E794E /* NSArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8E41A2AA141008E794E /* NSArray.swift */; };
-		05D3B8EE1A2AA141008E794E /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8E51A2AA141008E794E /* Range.swift */; };
-		05D3B8EF1A2AA141008E794E /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8E61A2AA141008E794E /* Sequence.swift */; };
-		05D3B8F01A2AA141008E794E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8E71A2AA141008E794E /* String.swift */; };
-		05D3B8F21A2AA1D5008E794E /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8F11A2AA1D5008E794E /* Int.swift */; };
 		05D3B8F51A2AF1E6008E794E /* BeaconRanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D3B8F41A2AF1E6008E794E /* BeaconRanger.swift */; };
 		05D4F60C1A2247FC0027EA62 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60A1A2247FC0027EA62 /* Notify.swift */; };
 		05D4F60D1A2247FC0027EA62 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */; };
@@ -150,17 +140,7 @@
 		05CDA6F51A192838003163A8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		05CDA6F71A192841003163A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		05D3B8DA1A2A5453008E794E /* FoundBeaconsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundBeaconsCell.swift; sourceTree = "<group>"; };
-		05D3B8DF1A2AA141008E794E /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		05D3B8E01A2AA141008E794E /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
-		05D3B8E11A2AA141008E794E /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
-		05D3B8E21A2AA141008E794E /* ExSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExSwift.swift; sourceTree = "<group>"; };
-		05D3B8E31A2AA141008E794E /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
-		05D3B8E41A2AA141008E794E /* NSArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArray.swift; sourceTree = "<group>"; };
-		05D3B8E51A2AA141008E794E /* Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
-		05D3B8E61A2AA141008E794E /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
-		05D3B8E71A2AA141008E794E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		05D3B8F11A2AA1D5008E794E /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		05D3B8F31A2AA589008E794E /* TestIt.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestIt.playground; sourceTree = "<group>"; };
+		05D3B8F31A2AA589008E794E /* huebi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = huebi.playground; sourceTree = "<group>"; };
 		05D3B8F41A2AF1E6008E794E /* BeaconRanger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconRanger.swift; sourceTree = "<group>"; };
 		05D4F60A1A2247FC0027EA62 /* Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
 		05D4F60B1A2247FC0027EA62 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
@@ -206,8 +186,8 @@
 			children = (
 				05CDA6F51A192838003163A8 /* CoreBluetooth.framework */,
 				05CDA6F71A192841003163A8 /* CoreLocation.framework */,
-				05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */,
 				055F903A1A1A5AF800A2D808 /* Alamofire.xcodeproj */,
+				05CDA6EA1A1927FA003163A8 /* BlueCapKit.xcodeproj */,
 				05CDA6C61A192336003163A8 /* huebi */,
 				05CDA6DC1A192336003163A8 /* huebiTests */,
 				05CDA6C51A192336003163A8 /* Products */,
@@ -226,7 +206,7 @@
 		05CDA6C61A192336003163A8 /* huebi */ = {
 			isa = PBXGroup;
 			children = (
-				05D3B8DE1A2AA141008E794E /* ExSwift */,
+				05D3B8F31A2AA589008E794E /* huebi.playground */,
 				05CDA6C91A192336003163A8 /* AppDelegate.swift */,
 				05D4F6111A22851D0027EA62 /* StatusViewController.swift */,
 				05CDA6D01A192336003163A8 /* Images.xcassets */,
@@ -235,7 +215,6 @@
 				05CDA6CD1A192336003163A8 /* Main.storyboard */,
 				05CDA6C71A192336003163A8 /* Supporting Files */,
 				05D4F6361A23BA240027EA62 /* Utils */,
-				05D3B8F31A2AA589008E794E /* TestIt.playground */,
 			);
 			path = huebi;
 			sourceTree = "<group>";
@@ -272,23 +251,6 @@
 				05CDA6F21A1927FA003163A8 /* BlueCapKitTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		05D3B8DE1A2AA141008E794E /* ExSwift */ = {
-			isa = PBXGroup;
-			children = (
-				05D3B8DF1A2AA141008E794E /* Array.swift */,
-				05D3B8E01A2AA141008E794E /* Dictionary.swift */,
-				05D3B8E11A2AA141008E794E /* Double.swift */,
-				05D3B8E21A2AA141008E794E /* ExSwift.swift */,
-				05D3B8E31A2AA141008E794E /* Float.swift */,
-				05D3B8F11A2AA1D5008E794E /* Int.swift */,
-				05D3B8E41A2AA141008E794E /* NSArray.swift */,
-				05D3B8E51A2AA141008E794E /* Range.swift */,
-				05D3B8E61A2AA141008E794E /* Sequence.swift */,
-				05D3B8E71A2AA141008E794E /* String.swift */,
-			);
-			path = ExSwift;
 			sourceTree = "<group>";
 		};
 		05D4F6341A23B9E00027EA62 /* Bridge */ = {
@@ -474,17 +436,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05D3B8ED1A2AA141008E794E /* NSArray.swift in Sources */,
 				05D4F6121A22851D0027EA62 /* StatusViewController.swift in Sources */,
-				05D3B8E91A2AA141008E794E /* Dictionary.swift in Sources */,
-				05D3B8F21A2AA1D5008E794E /* Int.swift in Sources */,
-				05D3B8F01A2AA141008E794E /* String.swift in Sources */,
 				055FA2AF1A1BB1BB0042D2A3 /* HueClient.swift in Sources */,
-				05D3B8EE1A2AA141008E794E /* Range.swift in Sources */,
-				05D3B8EC1A2AA141008E794E /* Float.swift in Sources */,
-				05D3B8EF1A2AA141008E794E /* Sequence.swift in Sources */,
 				05BB2BE31A25011200D593AE /* AuthorizationProgressView.swift in Sources */,
-				05D3B8EB1A2AA141008E794E /* ExSwift.swift in Sources */,
 				05D3B8F51A2AF1E6008E794E /* BeaconRanger.swift in Sources */,
 				05BB2BE51A25037C00D593AE /* NoBridgeFoundViewController.swift in Sources */,
 				05BB2BE11A24FF4900D593AE /* FoundBridgesViewController.swift in Sources */,
@@ -492,10 +446,8 @@
 				053144DE1A23C134006523BD /* SwiftyJSON.swift in Sources */,
 				053144E01A23C198006523BD /* Alamofire-SwiftyJSON.swift in Sources */,
 				05D4F60D1A2247FC0027EA62 /* UIAlertControllerExtensions.swift in Sources */,
-				05D3B8E81A2AA141008E794E /* Array.swift in Sources */,
 				05D4F61A1A22C93E0027EA62 /* BeaconsViewController.swift in Sources */,
 				05D4F60C1A2247FC0027EA62 /* Notify.swift in Sources */,
-				05D3B8EA1A2AA141008E794E /* Double.swift in Sources */,
 				055FA2B71A1E53960042D2A3 /* BridgeConnectViewController.swift in Sources */,
 				05D4F6141A22BFCE0027EA62 /* BridgesViewController.swift in Sources */,
 				05348D9D1A1EED1B009726B9 /* DataStore.swift in Sources */,
